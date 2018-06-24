@@ -1,0 +1,39 @@
+//Logo
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes apear {
+  0% {opacity: 0;}
+  25% {opacity: 0;}
+  50% {opacity: 1;}
+  75% {}
+  100% {}
+}
+
+@keyframes zoom {
+  0% {-webkit-transform:scale(1);}
+  30% {-webkit-transform:scale(1.1);}
+  100% {-webkit-transform:scale(1);}
+}
+
+//Sign up
+@keyframes switchColor {
+  0% {color:pink;}
+  50% {color:white;}
+  100% {color:pink;}
+}
+
+//Modal
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}

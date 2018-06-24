@@ -1,0 +1,22 @@
+# dist
+dist/build
+
+# MacOS
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+# VSCode
+.history
+.vscode
+
+# Node.js
+logs
+*.log
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+node_modules
+
+# dotenv environment variables file
+.env

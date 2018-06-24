@@ -1,0 +1,6 @@
+`npm i -g gulp` & `npm i -g gulp-cli`
+On folder `npm i`
+To run `npm run start`
+For build prod `npm run build`
+For compil sass 'gulp watch'
+'gulp-hub' between npm

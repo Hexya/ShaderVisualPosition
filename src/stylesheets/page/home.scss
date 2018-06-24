@@ -1,0 +1,19 @@
+.home-wrapper-container {
+  .coordinate-container {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: $white;
+  }
+
+  #btn {
+    border: none;
+    background: $white;
+  }
+  a {
+    text-decoration: none;
+    color: $white;
+    background: $black;
+    padding: 0 10px;
+  }
+}

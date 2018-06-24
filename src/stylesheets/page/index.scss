@@ -1,0 +1,106 @@
+.index-wrapper-container {
+
+  .coordinate-container {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: $white;
+    #btn {
+      border: none;
+      background: $white;
+    }
+  }
+
+  .fenetreSvg {
+    text-align: center;
+    animation: zoom 1s ease-in-out forwards;
+    position: absolute;
+    height: 30vh;
+    width: 60%;
+    left: 20%;
+    top:35vh;
+    //background: grey;
+    #Calque_1 {
+      width: 100%;
+      height: 100%;
+      //top: -50px;
+      //overflow: visible;
+      //left: -40px;
+    }
+    .path {
+      stroke-dasharray: 500;
+      stroke-dashoffset: 500;
+      animation: dash 2s ease-in-out forwards;
+      opacity: 1;
+    }
+    .logo-img-container {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      height: 175px;
+      .logo {
+        animation: apear 3s ease-in-out forwards;
+        height: 100%;
+        max-width: 100%;
+      }
+    }
+    svg:not(:root) {
+      max-height: 175px;
+    }
+  }
+  .log-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    top: 60vh;
+    .log-content {
+      display: flex;
+      flex-direction: column;
+      width: 15%;
+      min-width: 250px;
+      a {
+        text-decoration: none;
+        color: $white;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 50px;
+        padding: 5px 10px;
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: $normal-size;
+        &:nth-child(2) {
+          color: pink;
+          animation: switchColor .5s ease-out infinite;
+          font-size: 1.3rem;
+        }
+        &:hover {
+          color: $black;
+          background: $white;
+        }
+      }
+    }
+  }
+
+  @media (max-width:700px) {
+    .fenetreSvg {
+      width: 100%;
+      left: 0;
+      .logo-img-container {
+        .logo {
+          height: 140px;
+        }
+      }
+    }
+    .log-container {
+      top: 57vh;
+      .log-content {
+        a {
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+
+}

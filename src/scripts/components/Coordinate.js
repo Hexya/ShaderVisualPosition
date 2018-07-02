@@ -1,44 +1,56 @@
+import State from '../State';
+
 export default class Coordinate {
-  constructor(width, height) {
+    constructor() {
 
-      this.country;
-      this.state;
-      this.city;
-      this.latitude;
-      this.longitude;
-      this.ip;
+        this.registerDOM();
+        this.registerEvents();
+    }
 
-      function init() {
-      }
-      function event() {
-          document.getElementById('btn').addEventListener('click', autogeo);
-      }
+    registerDOM() {
+        //Dom Elements
+        this.elt = document.body.querySelector('.coordinate-container')
+        this.elts = {};
+        this.elts.country = this.elt.querySelector('.country');
+        this.elts.state = this.elt.querySelector('.state');
+        this.elts.city = this.elt.querySelector('.city');
+        this.elts.latitude = this.elt.querySelector('.latitude');
+        this.elts.longitude = this.elt.querySelector('.longitude');
+        this.elts.ip = this.elt.querySelector('.ip');
+        this.elts.generateBtn = this.elt.querySelector('.generate-btn');
+    }
 
-      function autogeo() {
-          $.ajax({
-              url: "https://geoip-db.com/jsonp",
-              jsonpCallback: "callback",
-              dataType: "jsonp",
-              success: function( location ) {
-                  $('#country').html(location.country_name);
-                  $('#state').html(location.state);
-                  $('#city').html(location.city);
-                  $('#latitude').html(location.latitude);
-                  $('#longitude').html(location.longitude);
-                  $('#ip').html(location.IPv4);
-                  this.country = location.country_name;
-                  this.state = location.state;
-                  this.city = location.city;
-                  this.latitude = location.latitude;
-                  this.longitude = location.longitude;
-                  this.ip = location.IPv4;
-                  console.log(this.country)
+    registerEvents() {
+        this.onResponse = this.onResponse.bind(this)
+        this.elts.generateBtn.addEventListener('click', this.onGenerateBtnClick.bind(this));
+    }
 
-              }
-          });
-      }
+    autoGeo() {
+        const data = new FormData();
+        this.xhr = new XMLHttpRequest();
+        this.xhr.open('POST', 'https://geoip-db.com/json', true);
+        this.xhr.onload = this.onResponse;
+        this.xhr.send(data);
+    }
 
-      init();
-      event();
-  }
+    onGenerateBtnClick() {
+        this.autoGeo()
+    }
+
+    onResponse() {
+        const data = JSON.parse(this.xhr.responseText);
+        State.country = data.country_name;
+        State.state = data.state;
+        State.city = data.city;
+        State.latitude = data.latitude;
+        State.longitude = data.longitude;
+        State.ip = data.IPv4;
+
+        this.elts.country.innerHTML = State.country;
+        this.elts.state.innerHTML = State.state;
+        this.elts.city.innerHTML = State.city;
+        this.elts.latitude.innerHTML = State.latitude;
+        this.elts.longitude.innerHTML = State.longitude;
+        this.elts.ip.innerHTML = State.ip;
+    };
 }

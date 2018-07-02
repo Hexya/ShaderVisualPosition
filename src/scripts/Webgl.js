@@ -10,7 +10,9 @@ export default class Webgl {
     this.camera = new THREE.PerspectiveCamera( 50, width / height, 1, 1000 );
     this.camera.position.z = 100;
 
-    this.renderer = new THREE.WebGLRenderer();
+    this.renderer = new THREE.WebGLRenderer({
+        preserveDrawingBuffer: true
+    });
     this.renderer.setSize( width, height );
     this.renderer.setClearColor( 0x000000 );
 

@@ -21,19 +21,22 @@ if(!isset($_SESSION["username"])) {
         echo '<br /><br /><a href="logout.php">Logout</a>';
     ?>
   </header>
-  <div class="home-wrapper-container">
+  <div class="experience-wrapper-container">
     <div class="coordinate-container">
       <p>Click the button to get your coordinates.</p>
 
-      <button id="btn">Try It</button>
+      <button class="generate-btn">Try It</button>
       <br><hr><br>
-      <p>Country: <span id="country"></span></p>
-      <p>State: <span id="state"></span></p>
-      <p>City: <span id="city"></span></p>
-      <p>Latitude: <span id="latitude">161</span></p>
-      <p>Longitude: <span id="longitude">200</span></p>
-      <p>IP: <span id="ip"></span></p>
+      <p>Country: <span class="country"></span></p>
+      <p>State: <span class="state"></span></p>
+      <p>City: <span class="city"></span></p>
+      <p>Latitude: <span class="latitude">161</span></p>
+      <p>Longitude: <span class="longitude">200</span></p>
+      <p>IP: <span class="ip"></span></p>
+      <button class="save-btn">SAVE ME BITCH</button>
     </div>
+
+
   </div>
 
   <script src="./build/main.js"></script>

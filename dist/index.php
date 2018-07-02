@@ -28,45 +28,28 @@
 
     <div class="log-container">
         <div class="log-content">
-            <a href="./login.php">Log in</a>
-            <a href="./signup.php">Sign up now !</a>
+            <a class="login-btn">Log in</a>
+            <a class="signup-btn">Sign up now !</a>
         </div>
     </div>
-
-
-    <button id="login-btn">Open login Modal</button>
-    <button id="signup-btn">Open login Modal</button>
 
     <!-- Modal -->
-    <div id="myModal" class="modal">
-
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="close">&times;</span>
-                <h2>Modal Header</h2>
-            </div>
-            <div class="modal-body">
-
-            </div>
-            <div class="modal-footer">
-                <h3>Modal Footer</h3>
-            </div>
-        </div>
-
-    </div>
-
+    <?php
+    require_once('./partials/modal-signup.php');
+    require_once('./partials/modal-login.php');
+    ?>
 
     <div class="coordinate-container">
         <p>Click the button to get your coordinates.</p>
 
-        <button id="btn">Try It</button>
+        <button class="generate-btn">Try It</button>
         <br><hr><br>
-        <p>Country: <span id="country"></span></p>
-        <p>State: <span id="state"></span></p>
-        <p>City: <span id="city"></span></p>
-        <p>Latitude: <span id="latitude">161</span></p>
-        <p>Longitude: <span id="longitude">200</span></p>
-        <p>IP: <span id="ip"></span></p>
+        <p>Country: <span class="country"></span></p>
+        <p>State: <span class="state"></span></p>
+        <p>City: <span class="city"></span></p>
+        <p>Latitude: <span class="latitude">161</span></p>
+        <p>Longitude: <span class="longitude">200</span></p>
+        <p>IP: <span class="ip"></span></p>
     </div>
 
 </div>

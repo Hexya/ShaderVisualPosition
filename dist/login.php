@@ -29,7 +29,7 @@ try
             if($count > 0)
             {
                 $_SESSION["username"] = $_POST["username"];
-                header("location:home.php");
+                header("location:experience.php");
             }
             else
             {

@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import vertexShader from './shaders/pVertex.vert';
 import fragmentShader from './shaders/pFragment.frag';
 import Coordinate from '../../components/Coordinate';
+import State from '../../State'
 
 export default class Plane extends THREE.Object3D {
     constructor() {
@@ -31,9 +32,11 @@ export default class Plane extends THREE.Object3D {
     }
 
     update(time) {
-        this.material.uniforms.uLon.value = document.getElementById('longitude').innerHTML;
-        this.material.uniforms.uLat.value = document.getElementById('latitude').innerHTML;
-        this.material.uniforms.uFul.value = document.getElementById('latitude').innerHTML.slice(-1);
+        this.material.uniforms.uLon.value = State.longitude;
+        this.material.uniforms.uLat.value = State.latitude;
+        let uFul = State.latitude + ''
+        uFul = uFul.slice(-1);
+        this.material.uniforms.uFul.value = uFul
         this.material.uniforms.uTime.value = time * 0.05;
         this.rotation.z += 0.001;
     }

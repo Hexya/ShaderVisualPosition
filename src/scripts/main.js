@@ -1,7 +1,7 @@
 import Webgl from './Webgl';
 import raf from 'raf';
 import 'gsap';
-const $  = require("jquery");
+import $ from 'jquery';
 window.$ = $;
 
 let webgl;
@@ -13,7 +13,7 @@ document.body.appendChild( webgl.renderer.domElement );
 function init() {
     animate();
     require('./bundle/index.app.js');
-    require('./bundle/home.app.js');
+    require('./bundle/experience.app.js');
 }
 
 function resizeHandler() {

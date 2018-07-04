@@ -39,8 +39,12 @@ export default class Coordinate {
         this.elts.transition.classList.add('generate-transition');
         this.elts.transitionTxt.classList.add('generating');
         setTimeout(()=> {
-        document.querySelector('.generate-container').style.display = 'none';
+        this.elt.querySelector('.generate-container').style.display = 'none';
         },1000);
+        setTimeout(()=> {
+            this.elt.querySelector('.transition').style.height = '0px';
+            this.elt.querySelector('.loading').style.height = '0px';
+        },5000);
     }
 
     onGenerateBtnClick() {

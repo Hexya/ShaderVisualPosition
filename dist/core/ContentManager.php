@@ -27,10 +27,10 @@ Class ContentManager{
             $_SESSION["username"] = $name;
             $_SESSION["picture"] = $image;
             $data = [
-                'name' => mb_convert_case($pPost['name'], MB_CASE_TITLE, "UTF-8"),
+                'name'     => mb_convert_case($pPost['name'], MB_CASE_TITLE, "UTF-8"),
                 'password' => md5($pPost['password']),
-                'image' => $pFIles['picture']['name'],
-                'success' => true
+                'image'    => $pFIles['picture']['name'],
+                'success'  => true
             ];
         } else {
             $data = [
@@ -56,11 +56,12 @@ Class ContentManager{
         if($count > 0) {
             // Recup ligne de base de donné sous forme de tableaux
             $user = $statement->fetch();
+            $_SESSION["id"] = $user["id"];
             $_SESSION["username"] = $user["username"];
-            $_SESSION["picture"] = $user["media"];
+            $_SESSION["picture"]  = $user["media"];
             $data = [
                 'username' => $pPost["username"],
-                'success' => true
+                'success'  => true
             ];
         } else {
             $data = [
@@ -75,9 +76,18 @@ Class ContentManager{
 
     public function saveImg($pPost) {
         $data = base64_decode(preg_replace('#^data:image/\w+;base64,#i', '', $pPost['base64']));
-        $fname = time() . '.jpg';
-        file_put_contents('../uploads/shaders/' . $fname, $data);
-        $query = $this->bdd->prepare('INSERT INTO images (id, username, country, state, city, latitude, longitude, fname ) VALUES ("' . $id . '""' . $name . '","' . $pPost['country'] . '", "' . $pPost['state'] . '", "' . $pPost['city'] . '", "' . $pPost['latitude'] . '", "' . $pPost['longitude'] . '", "' . $fname . '")');
+        $fileName = time() . '.jpg';
+        file_put_contents('../uploads/shaders/' . $fileName, $data);
+        $id        = $_SESSION["id"];
+        $name      = $_SESSION["username"];
+        $country   = $pPost["country"];
+        $state     = $pPost["state"];
+        $city      = $pPost["city"];
+        $latitude  = $pPost["latitude"];
+        $longitude = $pPost["longitude"];
+        $query = $this->bdd->prepare(
+         'INSERT INTO shaders (usr_id, usr_name, sh_country, sh_state, sh_city, sh_latitude, sh_longitude, sh_media) 
+          VALUES ("' . $id . '", "' . $name . '", "' . $country . '", "' . $state . '", "' . $city . '", "' . $latitude . '", "' . $longitude . '", "' . $fileName . '")');
         $query->execute();
     }
 }

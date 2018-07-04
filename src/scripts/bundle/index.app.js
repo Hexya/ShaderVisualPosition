@@ -1,11 +1,10 @@
-
 import SignupModal from '../components/SignupModal';
 import LoginModal from '../components/LoginModal';
-
 
 let wrapper = document.body.querySelectorAll('.index-wrapper-container');
 
 class Home {
+
     constructor() {
         this.registerDOM();
         this.createComponents();

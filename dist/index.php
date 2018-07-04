@@ -40,16 +40,6 @@
     require_once('./partials/modal-success.php');
     ?>
 
-    <div class="coordinate-container">
-        <button class="generate-btn">Try It</button>
-        <p>Country: <span class="country"></span></p>
-        <p>State: <span class="state"></span></p>
-        <p>City: <span class="city"></span></p>
-        <p>Latitude: <span class="latitude">161</span></p>
-        <p>Longitude: <span class="longitude">200</span></p>
-        <p>IP: <span class="ip"></span></p>
-    </div>
-
 </div>
 
 

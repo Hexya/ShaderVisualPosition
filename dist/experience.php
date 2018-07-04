@@ -2,7 +2,7 @@
 //login_success.php
 session_start();
 if(!isset($_SESSION["username"])) {
-    header("location:pdo_login.php");
+    header("location:index.php");
 }
 ?>
 <!DOCTYPE html>
@@ -20,7 +20,9 @@ if(!isset($_SESSION["username"])) {
         echo
          '<div class="logout">
             <div class="img-container">
-                <img src="uploads/avatar/'.$_SESSION["picture"].'">
+                <a href="profil.php">
+                    <img src="uploads/avatar/'.$_SESSION["picture"].'">
+                </a>
             </div>
             <h3>'.$_SESSION["username"].'</h3>
             <a href="logout.php">
@@ -44,7 +46,6 @@ if(!isset($_SESSION["username"])) {
             <div class="loading">
                 <div class="sk-folding-cube"><div class="sk-cube1 sk-cube"></div><div class="sk-cube2 sk-cube"></div><div class="sk-cube4 sk-cube"></div><div class="sk-cube3 sk-cube"></div></div><p class="corp">Generating</p>
             </div>
-            <!--<p class="loading">Generating<span class="point-1">.</span><span class="point-2">.</span><span class="point-3">.</span>-->
             </p>
 
         <p>Country: <span class="country"></span></p>

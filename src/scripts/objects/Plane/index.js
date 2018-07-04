@@ -7,7 +7,10 @@ import State from '../../State'
 export default class Plane extends THREE.Object3D {
     constructor() {
         super();
-        new Coordinate();
+
+        if(document.querySelectorAll('.experience-wrapper-container').length > 0) {
+            new Coordinate();
+        }
 
         this.geometry = new THREE.PlaneBufferGeometry(  window.innerWidth, window.innerHeight, 10 );
 

@@ -15,10 +15,10 @@ if(isset($_GET["action"])){
 $cm = new ContentManager();
 // Switch case sur l'action reçue
 switch($action){
-    case 'addUser':
+    case 'signup':
         // Instanciation d'un objet de type ContentManager
         // On déclenche la méthode
-        $cm->addUser($_POST, $_FILES);
+        $cm->signup($_POST, $_FILES);
         // ContentManager::addCar($_POST) est un appel statique a la methode addCat
         break;
     case 'login':

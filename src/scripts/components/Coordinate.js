@@ -18,6 +18,8 @@ export default class Coordinate {
         this.elts.longitude = this.elt.querySelector('.longitude');
         this.elts.ip = this.elt.querySelector('.ip');
         this.elts.generateBtn = this.elt.querySelector('.generate-btn');
+        this.elts.transition = this.elt.querySelector('.transition');
+        this.elts.transitionTxt = this.elt.querySelector('.loading');
     }
 
     registerEvents() {
@@ -33,8 +35,17 @@ export default class Coordinate {
         this.xhr.send(data);
     }
 
+    generateTransition() {
+        this.elts.transition.classList.add('generate-transition');
+        this.elts.transitionTxt.classList.add('generating');
+        setTimeout(()=> {
+        document.querySelector('.generate-container').style.display = 'none';
+        },1000);
+    }
+
     onGenerateBtnClick() {
-        this.autoGeo()
+        this.generateTransition();
+        this.autoGeo();
     }
 
     onResponse() {

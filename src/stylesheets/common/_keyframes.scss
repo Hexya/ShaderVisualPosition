@@ -22,9 +22,9 @@
 
 //Sign up
 @keyframes switchColor {
-  0% {color:pink;}
+  0% {color:$pink;}
   50% {color:white;}
-  100% {color:pink;}
+  100% {color:$pink;}
 }
 
 //Modal
@@ -36,4 +36,80 @@
 @keyframes animatetop {
   from {top:-300px; opacity:0}
   to {top:0; opacity:1}
+}
+
+@keyframes closeModal {
+  0% {transform: scale(1);}
+  20% {transform: scale(1.1);}
+  80% {opacity: 1;}
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+    display: none;
+  }
+}
+
+//Generate
+@keyframes pushMe {
+  0% {transform: scale(2);}
+  50% {transform: scale(2.3);}
+  100% {transform: scale(2);}
+}
+@keyframes circlePush {
+  0% {transform: scale(1.4);}
+  70% {transform: scale(2.5);}
+  80% {transform: scale(2);opacity: 0;}
+  100% {opacity: 0;}
+}
+@keyframes bigCirclePush {
+  0% {transform: scale(1.4); opacity: 0.5;}
+  80% {transform: scale(1.8);opacity: 0.8;}
+  85% {opacity: 0.5;}
+  90% {transform: scale(2); opacity: 0.5;}
+  100% {transform: scale(2.2);opacity: 0;}
+}
+
+//Generate transition
+@keyframes generateTransition {
+  0% {transform: scale(1);z-index: 12};
+20% {transform: scale(50); opacity: 1};
+100% {opacity: 0; transform: scale(50);};
+}
+
+@keyframes generateLoader {
+  0% {opacity: 1; z-index: 15;};
+80% {opacity: 1};
+100% {opacity: 0};
+}
+
+@-webkit-keyframes sk-foldCubeAngle {
+  0%, 10% {
+    -webkit-transform: perspective(140px) rotateX(-180deg);
+    transform: perspective(140px) rotateX(-180deg);
+    opacity: 0;
+  } 25%, 75% {
+      -webkit-transform: perspective(140px) rotateX(0deg);
+      transform: perspective(140px) rotateX(0deg);
+      opacity: 1;
+    } 90%, 100% {
+        -webkit-transform: perspective(140px) rotateY(180deg);
+        transform: perspective(140px) rotateY(180deg);
+        opacity: 0;
+      }
+}
+
+@keyframes sk-foldCubeAngle {
+  0%, 10% {
+    -webkit-transform: perspective(140px) rotateX(-180deg);
+    transform: perspective(140px) rotateX(-180deg);
+    opacity: 0;
+  } 25%, 75% {
+      -webkit-transform: perspective(140px) rotateX(0deg);
+      transform: perspective(140px) rotateX(0deg);
+      opacity: 1;
+    } 90%, 100% {
+        -webkit-transform: perspective(140px) rotateY(180deg);
+        transform: perspective(140px) rotateY(180deg);
+        opacity: 0;
+      }
 }

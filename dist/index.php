@@ -37,13 +37,11 @@
     <?php
     require_once('./partials/modal-signup.php');
     require_once('./partials/modal-login.php');
+    require_once('./partials/modal-success.php');
     ?>
 
     <div class="coordinate-container">
-        <p>Click the button to get your coordinates.</p>
-
         <button class="generate-btn">Try It</button>
-        <br><hr><br>
         <p>Country: <span class="country"></span></p>
         <p>State: <span class="state"></span></p>
         <p>City: <span class="city"></span></p>

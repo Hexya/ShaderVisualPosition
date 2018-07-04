@@ -16,6 +16,7 @@ export default class LoginModal {
         this.elts.submitBtn = this.elts.modal.querySelector('.submit-btn');
         this.elts.loginInput = this.elts.modal.querySelector('.login-input');
         this.elts.passwordInput = this.elts.modal.querySelector('.password-input');
+        this.elts.modalContent = this.elts.modal.querySelector('.modal-content');
     }
 
     registerEvents() {
@@ -30,7 +31,12 @@ export default class LoginModal {
     }
 
     close() {
-        this.elts.modal.classList.remove('active');
+        this.elts.modalContent.classList.add('closeModal')
+        var myself = this;
+        setTimeout(function(){
+            myself.elts.modal.classList.remove('active');
+            myself.elts.modalContent.classList.remove('closeModal')
+        }, 400);
         this.elts.modal.classList.remove('error');
         this.elts.loginInput.value = '';
         this.elts.passwordInput.value = '';

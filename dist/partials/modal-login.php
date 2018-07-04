@@ -5,7 +5,7 @@
             <span class="close">&times;</span>
         </div>
         <div class="modal-body">
-            <h1>Log you in Shader Visual Position</h1>
+            <h1>Sign in Shader Visual Position</h1>
             <div class="error-msg">
                 <span class="cross">×</span>
                 <p class="message">Incorrect login or password</p>

@@ -26,6 +26,11 @@
   50% {color:white;}
   100% {color:$pink;}
 }
+@keyframes switchBorderColor {
+  0% {border-color: #ff95df;}
+  50% {border-color:white;}
+  100% {border-color: #ff9adb;}
+}
 
 //Modal
 @-webkit-keyframes animatetop {

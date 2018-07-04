@@ -54,7 +54,9 @@ if(!isset($_SESSION["username"])) {
       <p>Latitude: <span class="latitude">161</span></p>
       <p>Longitude: <span class="longitude">200</span></p>
       <p>IP: <span class="ip"></span></p>
-      <button class="save-btn">SAVE ME BITCH</button>
+      <button class="save-btn">
+          <img src="images/download.png">
+      </button>
     </div>
 
 

@@ -1,5 +1,7 @@
 import State from '../State';
 
+let wrapper = document.querySelectorAll('.experience-wrapper-container');
+
 export default class Coordinate {
     constructor() {
 
@@ -9,7 +11,7 @@ export default class Coordinate {
 
     registerDOM() {
         //Dom Elements
-        this.elt = document.body.querySelector('.coordinate-container')
+        this.elt = wrapper[0];
         this.elts = {};
         this.elts.country = this.elt.querySelector('.country');
         this.elts.state = this.elt.querySelector('.state');
@@ -39,7 +41,8 @@ export default class Coordinate {
         this.elts.transition.classList.add('generate-transition');
         this.elts.transitionTxt.classList.add('generating');
         setTimeout(()=> {
-        this.elt.querySelector('.generate-container').style.display = 'none';
+            this.elt.querySelector('.generate-container').style.display = 'none';
+            this.elt.querySelector('.save-btn').classList.add('downloadSee');
         },1000);
         setTimeout(()=> {
             this.elt.querySelector('.transition').style.height = '0px';

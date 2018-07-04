@@ -12,8 +12,8 @@ class Experience {
     }
 
     registerDOM() {
-        this.elt = wrapper[0]
-        this.elts = {}
+        this.elt = wrapper[0];
+        this.elts = {};
         this.elts.saveBtn = this.elt.querySelector('.save-btn');
         this.elts.canvas = document.body.querySelector('canvas');
     }
@@ -46,7 +46,7 @@ class Experience {
         const img = document.createElement('img')
         img.src = this.savedData
         document.body.appendChild(img)*/
-
+        this.elts.saveBtn.classList.add('invert');
     }
 
 }

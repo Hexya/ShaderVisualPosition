@@ -14,6 +14,7 @@ function init() {
     animate();
     require('./bundle/index.app.js');
     require('./bundle/experience.app.js');
+    require('./bundle/profil.app.js');
 }
 
 function resizeHandler() {

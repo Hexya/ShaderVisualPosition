@@ -85,9 +85,26 @@ Class ContentManager{
         $city      = $pPost["city"];
         $latitude  = $pPost["latitude"];
         $longitude = $pPost["longitude"];
+        $date      = date("Y-m-d H:i:s");
         $query = $this->bdd->prepare(
-         'INSERT INTO shaders (usr_id, usr_name, sh_country, sh_state, sh_city, sh_latitude, sh_longitude, sh_media) 
-          VALUES ("' . $id . '", "' . $name . '", "' . $country . '", "' . $state . '", "' . $city . '", "' . $latitude . '", "' . $longitude . '", "' . $fileName . '")');
+         'INSERT INTO shaders (usr_id, usr_name, sh_country, sh_state, sh_city, sh_latitude, sh_longitude, sh_media, sh_date) 
+          VALUES ("' . $id . '", "' . $name . '", "' . $country . '", "' . $state . '", "' . $city . '", "' . $latitude . '", "' . $longitude . '", "' . $fileName . '", "' . $date . '")');
         $query->execute();
+    }
+
+    public function getShaders() {
+        $query = $this->bdd->prepare('SELECT * FROM shaders WHERE usr_id = '.$_SESSION["id"].' ORDER BY sh_date');
+        $query->execute();
+
+        $results = $query->fetchAll();
+        foreach($results as $shader) {
+            $response.= '<div class="shader-container">
+                            <div class="shader-content">
+                                <img src="uploads/shaders/'.$shader['sh_media'].'">
+                            </div>
+                            <p>'.$shader['sh_country'].' | '.$shader['sh_state'].'</p>
+                        </div>';
+        }
+        return $response;
     }
 }

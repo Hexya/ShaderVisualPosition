@@ -32,7 +32,27 @@ if(!isset($_SESSION["username"])) {
     ?>
 </header>
 <div class="profil-wrapper-container">
-    <p>Profil page</p>
+    <div class="user-profil-container">
+        <div class="user-img">
+            <?= '<img src="uploads/avatar/'.$_SESSION["picture"].'">' ?>
+        </div>
+        <div class="user-info">
+            <?= '<p class="name-txt">'.$_SESSION["username"].'</p>' ?>
+            <p class="modif-txt">Update your profil</p>
+        </div>
+        <div class="more-pic"><a href="experience.php">+</a></div>
+        <p class="more-txt">Generate an other</br>shaders</p>
+    </div>
+    <div class="gallery-desc">
+        <p>Find here all your Shader visual wallpaper </p>
+    </div>
+    <div class="gallery-container">
+        <?php
+            require('./core/ContentManager.php');
+            $cm = new ContentManager();
+            echo $cm->getShaders();
+        ?>
+    </div>
 
 
 </div>

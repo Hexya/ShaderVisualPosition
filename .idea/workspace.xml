@@ -4,17 +4,8 @@
     <list default="true" id="6347669a-503a-458d-b650-ae051162b70a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/dist/core/ContentManager.php" afterPath="$PROJECT_DIR$/dist/core/ContentManager.php" />
-      <change beforePath="$PROJECT_DIR$/dist/core/services.php" afterPath="$PROJECT_DIR$/dist/core/services.php" />
-      <change beforePath="$PROJECT_DIR$/dist/uploads/1530375906.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/dist/uploads/1530375940.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/dist/uploads/1530377791.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/dist/uploads/1530377890.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/dist/uploads/1530378015.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/dist/uploads/avatar/5b39f9efe1dda728722_tool_512x512.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/bundle/profil.app.js" afterPath="$PROJECT_DIR$/src/scripts/bundle/profil.app.js" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/objects/Plane/index.js" afterPath="$PROJECT_DIR$/src/scripts/objects/Plane/index.js" />
       <change beforePath="$PROJECT_DIR$/src/scripts/objects/Plane/shaders/pFragment.frag" afterPath="$PROJECT_DIR$/src/scripts/objects/Plane/shaders/pFragment.frag" />
-      <change beforePath="$PROJECT_DIR$/src/stylesheets/components/header.scss" afterPath="$PROJECT_DIR$/src/stylesheets/components/header.scss" />
+      <change beforePath="$PROJECT_DIR$/src/stylesheets/common/_variables.scss" afterPath="$PROJECT_DIR$/src/stylesheets/common/_variables.scss" />
       <change beforePath="$PROJECT_DIR$/src/stylesheets/page/profil.scss" afterPath="$PROJECT_DIR$/src/stylesheets/page/profil.scss" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,7 +41,7 @@
         <entry file="file://$PROJECT_DIR$/src/scripts/objects/Plane/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="510">
-              <caret line="44" column="37" lean-forward="false" selection-start-line="44" selection-start-column="37" selection-end-line="44" selection-end-column="37" />
+              <caret line="44" column="36" lean-forward="false" selection-start-line="44" selection-start-column="36" selection-end-line="44" selection-end-column="36" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -58,7 +49,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="State.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="State.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scripts/State.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
@@ -71,8 +62,8 @@
       <file leaf-file-name="pFragment.frag" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scripts/objects/Plane/shaders/pFragment.frag">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="517">
-              <caret line="122" column="0" lean-forward="true" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+            <state relative-caret-position="427">
+              <caret line="112" column="0" lean-forward="false" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -91,22 +82,22 @@
       <file leaf-file-name="ContentManager.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dist/core/ContentManager.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="95" column="175" lean-forward="false" selection-start-line="95" selection-start-column="175" selection-end-line="95" selection-end-column="175" />
+            <state relative-caret-position="317">
+              <caret line="107" column="51" lean-forward="true" selection-start-line="107" selection-start-column="51" selection-end-line="107" selection-end-column="51" />
               <folding>
-                <marker date="1530801186854" expanded="true" signature="1031:1139" ph="INSERT INTO users... " />
-                <marker date="1530801186854" expanded="true" signature="1763:1839" ph="SELECT * FRO... users" />
-                <marker date="1530801186854" expanded="true" signature="3298:3600" ph="INSERT INTO shaders... " />
-                <marker date="1530801186854" expanded="true" signature="3711:3843" ph="SELECT * FRO... shaders" />
-                <marker date="1530801186854" expanded="true" signature="3711:3848" ph="SELECT * FRO... shaders" />
-                <marker date="1530801186854" expanded="true" signature="4012:4249" ph="..." />
-                <marker date="1530801186854" expanded="true" signature="4012:4272" ph="..." />
-                <marker date="1530801186854" expanded="true" signature="4012:4277" ph="..." />
-                <marker date="1530801186854" expanded="true" signature="4012:4419" ph="..." />
-                <marker date="1530801186854" expanded="true" signature="4012:4448" ph="..." />
-                <marker date="1530801186854" expanded="true" signature="4069:4188" ph="..." />
-                <marker date="1530801186854" expanded="true" signature="4692:4824" ph="INSERT INTO liked_img... " />
-                <marker date="1530801186854" expanded="true" signature="4932:5007" ph="SELECT * FRO... liked_img" />
+                <marker date="1530816087517" expanded="true" signature="1031:1139" ph="INSERT INTO users... " />
+                <marker date="1530816087517" expanded="true" signature="1763:1839" ph="SELECT * FRO... users" />
+                <marker date="1530816087517" expanded="true" signature="3298:3600" ph="INSERT INTO shaders... " />
+                <marker date="1530816087517" expanded="true" signature="3711:3843" ph="SELECT * FRO... shaders" />
+                <marker date="1530816087517" expanded="true" signature="3711:3848" ph="SELECT * FRO... shaders" />
+                <marker date="1530816087517" expanded="true" signature="4012:4267" ph="..." />
+                <marker date="1530816087517" expanded="true" signature="4012:4289" ph="..." />
+                <marker date="1530816087517" expanded="true" signature="4012:4294" ph="..." />
+                <marker date="1530816087517" expanded="true" signature="4012:4523" ph="..." />
+                <marker date="1530816087517" expanded="true" signature="4012:4720" ph="..." />
+                <marker date="1530816087517" expanded="true" signature="4069:4188" ph="..." />
+                <marker date="1530816087517" expanded="true" signature="4964:5096" ph="INSERT INTO liked_img... " />
+                <marker date="1530816087517" expanded="true" signature="5204:5279" ph="SELECT * FRO... liked_img" />
               </folding>
             </state>
           </provider>
@@ -122,11 +113,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profil.scss" pinned="false" current-in-tab="false">
+      <file leaf-file-name="profil.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/stylesheets/page/profil.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="106" column="19" lean-forward="false" selection-start-line="106" selection-start-column="19" selection-end-line="106" selection-end-column="19" />
+            <state relative-caret-position="394">
+              <caret line="117" column="16" lean-forward="false" selection-start-line="117" selection-start-column="16" selection-end-line="117" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_variables.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/stylesheets/common/_variables.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="615">
+              <caret line="64" column="14" lean-forward="false" selection-start-line="64" selection-start-column="14" selection-end-line="64" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -136,7 +137,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>coordina</find>
       <find>log-c</find>
       <find>coor</find>
       <find>addUser</find>
@@ -166,6 +166,7 @@
       <find>lastLat</find>
       <find>lontitude</find>
       <find>uFul</find>
+      <find>shader-content</find>
     </findStrings>
     <replaceStrings>
       <replace>this</replace>
@@ -209,18 +210,18 @@
         <option value="$PROJECT_DIR$/src/stylesheets/page/experience.scss" />
         <option value="$PROJECT_DIR$/src/stylesheets/common/_base.scss" />
         <option value="$PROJECT_DIR$/src/scripts/main.js" />
-        <option value="$PROJECT_DIR$/src/stylesheets/common/_variables.scss" />
         <option value="$PROJECT_DIR$/src/stylesheets/common/_keyframes.scss" />
         <option value="$PROJECT_DIR$/dist/profil.php" />
         <option value="$PROJECT_DIR$/src/stylesheets/components/header.scss" />
         <option value="$PROJECT_DIR$/dist/core/services.php" />
         <option value="$PROJECT_DIR$/src/scripts/bundle/profil.app.js" />
-        <option value="$PROJECT_DIR$/src/stylesheets/page/profil.scss" />
         <option value="$PROJECT_DIR$/src/scripts/objects/Plane/shaders/pVertex.vert" />
         <option value="$PROJECT_DIR$/src/scripts/objects/Plane/index.js" />
-        <option value="$PROJECT_DIR$/dist/core/ContentManager.php" />
         <option value="$PROJECT_DIR$/src/scripts/objects/Plane/shaders/pFragment.frag" />
         <option value="$PROJECT_DIR$/src/scripts/State.js" />
+        <option value="$PROJECT_DIR$/src/stylesheets/common/_variables.scss" />
+        <option value="$PROJECT_DIR$/dist/core/ContentManager.php" />
+        <option value="$PROJECT_DIR$/src/stylesheets/page/profil.scss" />
       </list>
     </option>
   </component>
@@ -452,12 +453,12 @@
       <workItem from="1529848413413" duration="28472000" />
       <workItem from="1530514635258" duration="42578000" />
       <workItem from="1530698653074" duration="12805000" />
-      <workItem from="1530720444405" duration="13040000" />
+      <workItem from="1530720444405" duration="15863000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105835000" />
+    <option name="totallyTimeSpent" value="108658000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -727,14 +728,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/stylesheets/common/_variables.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="62" column="14" lean-forward="false" selection-start-line="62" selection-start-column="14" selection-end-line="62" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -832,14 +825,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/stylesheets/page/profil.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="106" column="19" lean-forward="false" selection-start-line="106" selection-start-column="19" selection-end-line="106" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scripts/objects/Plane/shaders/pVertex.vert">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
@@ -848,32 +833,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/core/ContentManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="95" column="175" lean-forward="false" selection-start-line="95" selection-start-column="175" selection-end-line="95" selection-end-column="175" />
-          <folding>
-            <marker date="1530801186854" expanded="true" signature="1031:1139" ph="INSERT INTO users... " />
-            <marker date="1530801186854" expanded="true" signature="1763:1839" ph="SELECT * FRO... users" />
-            <marker date="1530801186854" expanded="true" signature="3298:3600" ph="INSERT INTO shaders... " />
-            <marker date="1530801186854" expanded="true" signature="3711:3843" ph="SELECT * FRO... shaders" />
-            <marker date="1530801186854" expanded="true" signature="3711:3848" ph="SELECT * FRO... shaders" />
-            <marker date="1530801186854" expanded="true" signature="4012:4249" ph="..." />
-            <marker date="1530801186854" expanded="true" signature="4012:4272" ph="..." />
-            <marker date="1530801186854" expanded="true" signature="4012:4277" ph="..." />
-            <marker date="1530801186854" expanded="true" signature="4012:4419" ph="..." />
-            <marker date="1530801186854" expanded="true" signature="4012:4448" ph="..." />
-            <marker date="1530801186854" expanded="true" signature="4069:4188" ph="..." />
-            <marker date="1530801186854" expanded="true" signature="4692:4824" ph="INSERT INTO liked_img... " />
-            <marker date="1530801186854" expanded="true" signature="4932:5007" ph="SELECT * FRO... liked_img" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scripts/objects/Plane/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
-          <caret line="44" column="37" lean-forward="false" selection-start-line="44" selection-start-column="37" selection-end-line="44" selection-end-column="37" />
+          <caret line="44" column="36" lean-forward="false" selection-start-line="44" selection-start-column="36" selection-end-line="44" selection-end-column="36" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
@@ -882,8 +845,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scripts/objects/Plane/shaders/pFragment.frag">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="122" column="0" lean-forward="true" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+        <state relative-caret-position="427">
+          <caret line="112" column="0" lean-forward="false" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -892,6 +855,44 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stylesheets/common/_variables.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="64" column="14" lean-forward="false" selection-start-line="64" selection-start-column="14" selection-end-line="64" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/core/ContentManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="107" column="51" lean-forward="true" selection-start-line="107" selection-start-column="51" selection-end-line="107" selection-end-column="51" />
+          <folding>
+            <marker date="1530816087517" expanded="true" signature="1031:1139" ph="INSERT INTO users... " />
+            <marker date="1530816087517" expanded="true" signature="1763:1839" ph="SELECT * FRO... users" />
+            <marker date="1530816087517" expanded="true" signature="3298:3600" ph="INSERT INTO shaders... " />
+            <marker date="1530816087517" expanded="true" signature="3711:3843" ph="SELECT * FRO... shaders" />
+            <marker date="1530816087517" expanded="true" signature="3711:3848" ph="SELECT * FRO... shaders" />
+            <marker date="1530816087517" expanded="true" signature="4012:4267" ph="..." />
+            <marker date="1530816087517" expanded="true" signature="4012:4289" ph="..." />
+            <marker date="1530816087517" expanded="true" signature="4012:4294" ph="..." />
+            <marker date="1530816087517" expanded="true" signature="4012:4523" ph="..." />
+            <marker date="1530816087517" expanded="true" signature="4012:4720" ph="..." />
+            <marker date="1530816087517" expanded="true" signature="4069:4188" ph="..." />
+            <marker date="1530816087517" expanded="true" signature="4964:5096" ph="INSERT INTO liked_img... " />
+            <marker date="1530816087517" expanded="true" signature="5204:5279" ph="SELECT * FRO... liked_img" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stylesheets/page/profil.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="117" column="16" lean-forward="false" selection-start-line="117" selection-start-column="16" selection-end-line="117" selection-end-column="16" />
           <folding />
         </state>
       </provider>

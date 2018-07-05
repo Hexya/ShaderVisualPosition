@@ -76,6 +76,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     .shader-container {
+      overflow: hidden;
       margin-top: 4vh;
       position: relative;
       //height: 200px;
@@ -96,12 +97,38 @@
           width: 100%;
         }
       }
-      p {
+      .local-txt {
         position: absolute;
         bottom: 5px;
         width: 100%;
         text-align: center;
         color: $white;
+        font-size: $litle-size;
+      }
+      .long-coor {
+        position: absolute;
+        color: $white;
+        top: 10px;
+        left: 10px;
+        opacity: 0.7;
+      }
+      .lat-coor {
+        position: absolute;
+        color: $white;
+        right: 5px;
+        top: 10px;
+        font-size: $normal-size;
+        transform: rotate(90deg);
+        width: 20px;
+        opacity: 0.1;
+      }
+      .state-txt {
+        position: absolute;
+        color: $white;
+        left: 0px;
+        bottom: 0px;
+        font-size: $so-big-size;
+        opacity: 0.1;
       }
       .ice-cream {
         opacity: 0;

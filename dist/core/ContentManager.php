@@ -102,8 +102,11 @@ Class ContentManager{
                             <div class="shader-content">
                                 <img src="uploads/shaders/'.$shader['sh_media'].'">
                             </div>
-                            <p>'.$shader['sh_country'].' | '.$shader['sh_state'].'</p>
+                            <p class="local-txt">'.$shader['sh_country'].' | '.$shader['sh_city'].'</p>
                             <img class="ice-cream" value="'.$shader['sh_id'].'" status="'.$shader['li_status'].'" src="images/iceCreamP.svg">
+                            <span class="long-coor">'.$shader['sh_longitude'].'</span>
+                            <span class="lat-coor">'.$shader['sh_latitude'].'</span>
+                            <span class="state-txt">'.$shader['sh_state'].'</span>
                         </div>';
         }
         return $response;

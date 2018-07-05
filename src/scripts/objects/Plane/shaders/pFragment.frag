@@ -111,16 +111,12 @@ void main() {
 
     vec3 color3 = mix(color1,color2,snoise(vPosition * (0.01 * uFul) + uTime));
 
-    vec3 color4 = vec3(0.+uLon, 117. *uLastLon, uLon) / 255.;
+    vec3 color4 = vec3(0.+uLon, uLat - 117. * uLastLon, uLon) / 255.;
     vec3 color5 = vec3(25.*uLastLon, 33., uLat) / 255.;
 
     vec3 color6 = mix(color4,color5,snoise(vPosition * 0.01 + uTime));
 
     vec3 color = mix(color3,color6,snoise(vPosition * 0.01 + uTime));
-
-
-
-
 
     //vec3 color = vec3(1.,0.,0.);
     float alpha = 1.;

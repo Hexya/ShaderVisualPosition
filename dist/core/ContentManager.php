@@ -93,7 +93,7 @@ Class ContentManager{
     }
 
     public function getShaders() {
-        $query = $this->bdd->prepare('SELECT * FROM shaders WHERE usr_id = '.$_SESSION["id"].' ORDER BY sh_date');
+        $query = $this->bdd->prepare('SELECT * FROM shaders LEFT JOIN liked_img ON shaders.sh_id = liked_img.li_img_id WHERE usr_id = '.$_SESSION["id"].' ORDER BY sh_date DESC');
         $query->execute();
 
         $results = $query->fetchAll();
@@ -103,7 +103,27 @@ Class ContentManager{
                                 <img src="uploads/shaders/'.$shader['sh_media'].'">
                             </div>
                             <p>'.$shader['sh_country'].' | '.$shader['sh_state'].'</p>
+                            <img class="ice-cream" value="'.$shader['sh_id'].'" status="'.$shader['li_status'].'" src="images/iceCreamP.svg">
                         </div>';
+        }
+        return $response;
+    }
+
+    public function likeImg($pPost) {
+        $likedUsrId  = $_SESSION["id"];
+        $likedImgId  = $pPost['imgId'];
+        $likedStatus = $pPost['status'];
+        $query = $this->bdd->prepare('INSERT INTO liked_img (li_usr_id, li_img_id, li_status) VALUES ("' . $likedUsrId . '","' . $likedImgId . '", "' . $likedStatus . '")');
+        $query->execute();
+    }
+
+    public function getLike() {
+        $query = $this->bdd->prepare('SELECT * FROM liked_img WHERE usr_id = '.$_SESSION["id"].' ORDER BY sh_date');
+        $query->execute();
+
+        $results = $query->fetchAll();
+        foreach($results as $shader) {
+            $response.= '<p>'.$shader['sh_country'].'</p>';
         }
         return $response;
     }

@@ -27,6 +27,8 @@ switch($action){
     case 'saveImg':
         $cm->saveImg($_POST);
         break;
+    case 'likeImg':
+        $cm->likeImg($_POST);
     default:
         $cm=null;
         header('Location:../index.php');

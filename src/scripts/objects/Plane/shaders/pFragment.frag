@@ -97,6 +97,7 @@ uniform float uTime;
 uniform float uLon;
 uniform float uLat;
 uniform float uFul;
+uniform float uLastLon;
 
 //color
 varying vec3 vPosition;
@@ -105,13 +106,13 @@ varying vec3 vPosition;
 void main() {
 
 
-    vec3 color1 = vec3(9., 12., 70.) / 255.;
-    vec3 color2 = vec3(255./uLat, 33., 166.) / 255.;
+    vec3 color1 = vec3(9. *uLastLon, 12., 70.) / 255.;
+    vec3 color2 = vec3(255./uLat, 33., 166./uLastLon) / 255.;
 
     vec3 color3 = mix(color1,color2,snoise(vPosition * (0.01 * uFul) + uTime));
 
-    vec3 color4 = vec3(0.+uLon, 117., uLon) / 255.;
-    vec3 color5 = vec3(255., 33., uLat) / 255.;
+    vec3 color4 = vec3(0.+uLon, 117. *uLastLon, uLon) / 255.;
+    vec3 color5 = vec3(25.*uLastLon, 33., uLat) / 255.;
 
     vec3 color6 = mix(color4,color5,snoise(vPosition * 0.01 + uTime));
 

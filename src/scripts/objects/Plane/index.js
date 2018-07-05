@@ -17,9 +17,10 @@ export default class Plane extends THREE.Object3D {
         this.uniforms = {
             uTime: { type: 'f', value: 0},
             uAmp: { type:'f', value: 2. },
-            uLon: { type:'f', value: 'lontitude'},
+            uLon: { type:'f', value: 'longitude'},
             uLat: { type:'f', value: 'latitude'},
             uFul: { type:'f', value: 'lastLat'},
+            uLastLon: { type:'f', value: 'lastLon'},
         };
 
         this.material = new THREE.ShaderMaterial({
@@ -39,7 +40,10 @@ export default class Plane extends THREE.Object3D {
         this.material.uniforms.uLat.value = State.latitude;
         let uFul = State.latitude + ''
         uFul = uFul.slice(-1);
-        this.material.uniforms.uFul.value = uFul
+        this.material.uniforms.uFul.value = uFul;
+        let uLastLon = State.latitude + ''
+        uLastLon = uLastLon.slice(-1);
+        this.material.uniforms.uLastLon.value = uLastLon;
         this.material.uniforms.uTime.value = time * 0.05;
         this.rotation.z += 0.001;
     }

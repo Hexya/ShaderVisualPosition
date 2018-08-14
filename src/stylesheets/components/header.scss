@@ -1,8 +1,22 @@
 header {
+  height: 80px;
+  .wire-news-btn {
+    height: auto;
+    width: 120px;
+    position: absolute;
+    top: 20px;
+    left: calc(50% - 60px);
+    display: flex;
+    z-index: 90;
+    outline: none;
+    img {
+      width: 100%;
+    }
+  }
   .logout {
     z-index: 999;
     position: absolute;
-    top: 10px;
+    top: 20px;
     right: 10px;
     color: $white;
     display: flex;
@@ -28,10 +42,38 @@ header {
       text-decoration: none;
       color: $white;
       cursor: pointer;
+      margin-top: 2px;
       img {
         height: 12px;
         width: auto;
       }
+    }
+  }
+  &.wire-news-header, &.home-header {
+    height: 60px;
+    .wire-news-btn {
+      width: 120px;
+      top: 20px;
+      left: calc(50% - 60px);
+      img {
+        width: 100%;
+      }
+    }
+    .logout {
+      h3, a {
+       filter: invert(1);
+      }
+      .img-container{
+        filter: invert(1);
+      }
+    }
+  }
+  &.wire-news-header {
+    background: $white;
+    .wire-news-btn {
+      top: 5px;
+      width: 110px;
+      left: calc(50% - 55px);
     }
   }
 }

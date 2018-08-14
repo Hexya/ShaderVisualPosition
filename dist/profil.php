@@ -15,7 +15,12 @@ if(!isset($_SESSION["username"])) {
     <link rel="stylesheet" href="./build/main.css">
 </head>
 <body>
-<header>
+<header class="home-header">
+    <div class="wire-news-btn">
+        <a href="wireNews.php">
+            <img src="images/logoCleanSC.png">
+        </a>
+    </div>
     <?php
     echo
         '<div class="logout">

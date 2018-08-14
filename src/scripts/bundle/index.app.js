@@ -15,7 +15,7 @@ class Home {
         this.elt = wrapper[0]
         this.elts = {}
         this.elts.signupBtn = this.elt.querySelector('.signup-btn')
-        this.elts.loginBtn = this.elt.querySelector('.login-btn')
+        this.elts.loginBtn = this.elt.querySelrector('.login-btn')
     }
 
     registerEvents() {

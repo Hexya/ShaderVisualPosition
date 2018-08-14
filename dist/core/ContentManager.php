@@ -14,8 +14,8 @@ Class ContentManager{
             $image = "";
             if (!empty($pFIles['picture']['tmp_name'])) {
                 $uniq = uniqid();
-                // uniqid est une methode native de php qui renvoi un numéo unique
-                // cela permet d'être sur de ne pas avoir 2fois le même fichier image
+                // uniqid is a native method of php which return a unique number
+                // This make sure you do not stock in base 2 same pics
                 move_uploaded_file($pFIles['picture']['tmp_name'], "../uploads/avatar/" . $uniq . $pFIles['picture']['name']);
                 $image = $uniq . $pFIles['picture']['name'];
             }
@@ -54,7 +54,7 @@ Class ContentManager{
         );
         $count = $statement->rowCount();
         if($count > 0) {
-            // Recup ligne de base de donné sous forme de tableaux
+            // Get line of BDD as like array
             $user = $statement->fetch();
             $_SESSION["id"] = $user["id"];
             $_SESSION["username"] = $user["username"];

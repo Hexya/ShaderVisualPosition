@@ -2,7 +2,7 @@
 session_start();
 
 require('ContentManager.php');
-// Analyse de l'action reçue en GET ou POST
+// Analyze of the action received GET or POST
 $action;
 if(isset($_GET["action"])){
     $action = $_GET["action"];
@@ -13,13 +13,12 @@ if(isset($_GET["action"])){
 }
 
 $cm = new ContentManager();
-// Switch case sur l'action reçue
+// Switch case on the action received
 switch($action){
     case 'signup':
-        // Instanciation d'un objet de type ContentManager
-        // On déclenche la méthode
+        // Instanciation of a ContentManager object type
+        // We active the method
         $cm->signup($_POST, $_FILES);
-        // ContentManager::addCar($_POST) est un appel statique a la methode addCat
         break;
     case 'login':
         $cm->login($_POST);

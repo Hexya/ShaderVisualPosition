@@ -12,9 +12,11 @@ Class Connexion{
             $this->bdd = new PDO('mysql:host=localhost;dbname=visual_pos', 'root','root', array(PDO::MYSQL_ATTR_INIT_COMMAND =>'SET NAMES utf8'));
         }
     }
-    // Methode getInstance (accessible par la classe ex: Cnnexion::getInstance() )
-    // La connexion  est un singelton, ele renvoit son instance si celle ci existe déjà
-    // sinon elle crée une nouvelle connexion.
+    // Method getInstance
+    // Accessible by class ( Connexion::getInstance() )
+    // Connexion is a singelton
+    // She return the instance if she exist
+    // else she create a new instance
     public static function getInstance(){
         if(is_null(self::$_instance)){
             self::$_instance = new Connexion();

@@ -44,13 +44,21 @@
       font-size: $big-size;
       cursor: pointer;
       a {
-        color: $white;
         text-decoration: none;
+        display: flex;
+        justify-content: center;
+        img {
+          height: 25px;
+          width: 25px;
+        }
       }
       &:hover {
         animation: switchBorderColor .5s ease-out infinite;
         a {
           animation: switchColor .5s ease-out infinite;
+          img {
+            filter: invert(1);
+          }
         }
       }
     }

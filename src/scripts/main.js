@@ -15,6 +15,7 @@ function init() {
     require('./bundle/index.app.js');
     require('./bundle/experience.app.js');
     require('./bundle/profil.app.js');
+    require('./bundle/wireNews.app.js');
 }
 
 function resizeHandler() {

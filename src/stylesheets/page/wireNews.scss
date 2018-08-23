@@ -19,6 +19,7 @@
         height: auto;
         background: $white;
         margin-bottom: 30px;
+        border-radius: 5px;
         .shader-header {
           height: 60px;
           width: 100%;
@@ -26,14 +27,14 @@
           align-items: center;
           padding: 10px;
           .user-img {
-            height: 40px;
-            width: 40px;
+            height: 50px;
+            width: 50px;
             border-radius: 40px;
-            border: 1px solid $darkgrey;
             display: flex;
             justify-content: center;
             align-items: center;
             overflow: hidden;
+            cursor: pointer;
             img {
               height: auto;
               width: 100%;
@@ -48,8 +49,8 @@
           height: 614px;
           width: 614px;
           img {
-            width: 100%;
-            height: auto;
+            width: auto;
+            height: 100%;
 
           }
         }
@@ -59,10 +60,18 @@
           .action-icon {
             display: flex;
             .like-icon {
-
+              img {
+                height: 30px;
+                width: 30px;
+                cursor: pointer;
+              }
             }
             .comment-icon {
-
+              margin-left: 10px;
+              img {
+                height: 30px;
+                width: 25px;
+              }
             }
           }
           .like-count {
@@ -91,6 +100,7 @@
       background: $white;
       padding: 10px;
       position: relative;
+      border-radius: 5px;
       .user-container , .rank-user{
         height: 60px;
         width: 100%;
@@ -102,11 +112,11 @@
           width: 50px;
           border-radius: 50px;
           overflow: hidden;
-          border: 1px solid $darkgrey;
           background: $white;
           display: flex;
           justify-content: center;
           align-items: center;
+          cursor: pointer;
           img {
             height: auto;
             width: 100%;

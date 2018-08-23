@@ -15,7 +15,7 @@ if(!isset($_SESSION["username"])) {
     <link rel="stylesheet" href="./build/main.css">
 </head>
 <body>
-<header class="home-header">
+<header class="home-header profil-header">
     <div class="wire-news-btn">
         <a href="wireNews.php">
             <img src="images/logoCleanSC.png">
@@ -45,7 +45,7 @@ if(!isset($_SESSION["username"])) {
             <?= '<p class="name-txt">'.$_SESSION["username"].'</p>' ?>
             <p class="modif-txt">Update your profil</p>
         </div>
-        <div class="more-pic"><a href="experience.php">+</a></div>
+        <div class="more-pic"><a href="experience.php"><img src="images/more.png"></a></div>
         <p class="more-txt">Generate an other</br>shaders</p>
     </div>
     <div class="gallery-desc">

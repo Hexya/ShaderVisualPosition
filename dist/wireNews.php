@@ -40,32 +40,11 @@ if(!isset($_SESSION["username"])) {
     <div class="center-container">
         <div class="left-container">
 
-            <div class="shader-container">
-
-                <div class="shader-header">
-                    <div class="user-img">
-                        <img src="">
-                    </div>
-                    <p>Vegita San</p>
-                </div>
-
-                <div class="shader-img">
-                    <img src="https://scontent-cdt1-1.cdninstagram.com/vp/86effe30f7a6fcfc6dbf893de071c21a/5C0476A7/t51.2885-15/e35/37896558_288588958571205_5674524883262898176_n.jpg">
-                </div>
-
-                <div class="shader-comment">
-                    <div class="action-icon">
-                        <span class="like-icon">Corazon</span>
-                        <span class="comment-icon">Comment</span>
-                    </div>
-                    <p class="like-count">1230 Like</p>
-                    <div class="user-comment">
-                        <p><span class="user-name">Maëlly </span> Amazing pic!</p>
-                    </div>
-                    <input type="text" placeholder="Add comment...">
-                </div>
-
-            </div>
+            <?php
+            require('./core/ContentManager.php');
+            $cm = new ContentManager();
+            echo $cm->getAllShaders();
+            ?>
 
         </div>
         <div class="right-container">
@@ -84,9 +63,16 @@ if(!isset($_SESSION["username"])) {
             ?>
 
             <div class="rank-container">
-                <div class="rank-user">
+
+
+                <?php
+                echo $cm->getUsers();
+                ?>
+
+
+                <!--<div class="rank-user">
                     <div class="img-user">
-                        <img src="">
+                        <img src="images/Tempo/Bulma.png">
                     </div>
                     <div class="txt-user">
                         <p class="pseudo">Bulma</p>
@@ -95,24 +81,42 @@ if(!isset($_SESSION["username"])) {
                 </div>
                 <div class="rank-user">
                     <div class="img-user">
-                        <img src="">
+                        <img src="images/Tempo/Gotenks.jpg">
                     </div>
                     <div class="txt-user">
-                        <p class="pseudo">Goten</p>
+                        <p class="pseudo">Gotenks</p>
                         <p class="desc">Original</p>
                     </div>
                 </div>
                 <div class="rank-user">
                     <div class="img-user">
-                        <img src="">
+                        <img src="images/Tempo/Beerus.jpg">
                     </div>
                     <div class="txt-user">
-                        <p class="pseudo">Badack</p>
+                        <p class="pseudo">Beerus</p>
                         <p class="desc">Oni</p>
                     </div>
                 </div><div class="rank-user">
                     <div class="img-user">
-                        <img src="">
+                        <img src="images/Tempo/Frieza.jpg">
+                    </div>
+                    <div class="txt-user">
+                        <p class="pseudo">Frieza</p>
+                        <p class="desc">Badass power</p>
+                    </div>
+                </div>
+                <div class="rank-user">
+                    <div class="img-user">
+                        <img src="images/Tempo/Gohan.png">
+                    </div>
+                    <div class="txt-user">
+                        <p class="pseudo">Gohan</p>
+                        <p class="desc">More lvl</p>
+                    </div>
+                </div>
+                <div class="rank-user">
+                    <div class="img-user">
+                        <img src="images/Tempo/Bulma.png">
                     </div>
                     <div class="txt-user">
                         <p class="pseudo">Bulma</p>
@@ -121,48 +125,39 @@ if(!isset($_SESSION["username"])) {
                 </div>
                 <div class="rank-user">
                     <div class="img-user">
-                        <img src="">
+                        <img src="images/Tempo/Gotenks.jpg">
                     </div>
                     <div class="txt-user">
-                        <p class="pseudo">Goten</p>
+                        <p class="pseudo">Gotenks</p>
                         <p class="desc">Original</p>
                     </div>
                 </div>
                 <div class="rank-user">
                     <div class="img-user">
-                        <img src="">
+                        <img src="images/Tempo/Beerus.jpg">
                     </div>
                     <div class="txt-user">
-                        <p class="pseudo">Badack</p>
+                        <p class="pseudo">Beerus</p>
                         <p class="desc">Oni</p>
                     </div>
                 </div><div class="rank-user">
                     <div class="img-user">
-                        <img src="">
+                        <img src="images/Tempo/Frieza.jpg">
                     </div>
                     <div class="txt-user">
-                        <p class="pseudo">Bulma</p>
-                        <p class="desc">Bebo flex</p>
+                        <p class="pseudo">Frieza</p>
+                        <p class="desc">Badass power</p>
                     </div>
                 </div>
                 <div class="rank-user">
                     <div class="img-user">
-                        <img src="">
+                        <img src="images/Tempo/Gohan.png">
                     </div>
                     <div class="txt-user">
-                        <p class="pseudo">Goten</p>
+                        <p class="pseudo">Gohan</p>
                         <p class="desc">Original</p>
                     </div>
-                </div>
-                <div class="rank-user">
-                    <div class="img-user">
-                        <img src="">
-                    </div>
-                    <div class="txt-user">
-                        <p class="pseudo">Badack</p>
-                        <p class="desc">Oni</p>
-                    </div>
-                </div>
+                </div>-->
 
                 <div class="shadow"></div>
             </div>

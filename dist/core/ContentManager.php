@@ -92,6 +92,25 @@ Class ContentManager{
         $query->execute();
     }
 
+    public function getUsers() {
+        $query = $this->bdd->prepare('SELECT * FROM users');
+        $query->execute();
+
+        $results = $query->fetchAll();
+        foreach($results as $user) {
+            $response.= '<div class="rank-user">
+                            <div class="img-user">
+                                <img src="uploads/avatar/'.$user['media'].'">
+                            </div>
+                            <div class="txt-user">
+                                <p class="pseudo">'. $user['username'] .'</p>
+                                <p class="desc">Bebo flex</p>
+                            </div>
+                        </div>';
+        }
+        return $response;
+    }
+
     public function getShaders() {
         $query = $this->bdd->prepare('SELECT * FROM shaders LEFT JOIN liked_img ON shaders.sh_id = liked_img.li_img_id WHERE usr_id = '.$_SESSION["id"].' ORDER BY sh_date DESC');
         $query->execute();
@@ -116,18 +135,93 @@ Class ContentManager{
         $likedUsrId  = $_SESSION["id"];
         $likedImgId  = $pPost['imgId'];
         $likedStatus = $pPost['status'];
-        $query = $this->bdd->prepare('INSERT INTO liked_img (li_usr_id, li_img_id, li_status) VALUES ("' . $likedUsrId . '","' . $likedImgId . '", "' . $likedStatus . '")');
-        $query->execute();
+
+        $existQuery = $this->bdd->query('SELECT * from liked_img WHERE li_usr_id = "' . $likedUsrId . '" and li_img_id = "' . $likedImgId . '"');
+
+        $count = false;
+        foreach($existQuery as $result) {
+            $count = $result;
+        }
+
+        if($count !== false) {
+            $query = $this->bdd->prepare('UPDATE liked_img SET li_status = ' . $likedStatus . ' WHERE li_id = ' . $count['li_id']);
+            $query->execute();
+        } else {
+            $query = $this->bdd->prepare('INSERT INTO liked_img (li_usr_id, li_img_id, li_status) VALUES ("' . $likedUsrId . '","' . $likedImgId . '", "' . $likedStatus . '")');
+            $query->execute();
+        }
     }
 
     public function getLike() {
         $query = $this->bdd->prepare('SELECT * FROM liked_img WHERE usr_id = '.$_SESSION["id"].' ORDER BY sh_date');
         $query->execute();
 
+        $response = '';
+
         $results = $query->fetchAll();
         foreach($results as $shader) {
             $response.= '<p>'.$shader['sh_country'].'</p>';
         }
         return $response;
+    }
+
+    public function getAllShaders() {
+        $query = $this->bdd->prepare('SELECT * FROM shaders LEFT JOIN liked_img ON shaders.sh_id = liked_img.li_img_id LEFT JOIN users ON shaders.usr_id = users.id ORDER BY sh_date DESC');
+        $query->execute();
+
+        $results = $query->fetchAll();
+        foreach($results as $shader) {
+            $query2 = $this->bdd->prepare('SELECT * FROM liked_img WHERE li_img_id ='. $shader['sh_id']);
+            $query2->execute();
+            $results2 = $query2->fetchAll();
+            $num = count($results2);
+            $response.= '<div class="shader-container">
+                            <div class="shader-header">
+                                <div class="user-img">
+                                    <img src="uploads/avatar/'.$shader['media'].'">
+                                </div>
+                                <p>'.$shader['usr_name'].'</p>
+                            </div>
+            
+                            <div class="shader-img">
+                                <img src="uploads/shaders/'.$shader['sh_media'].'">
+                            </div>
+                            <div class="shader-comment">
+                                <div class="action-icon">
+                                    <span class="like-icon"><img class="litle-ice-cream" value="'.$shader['sh_id'].'" status="'.$shader['li_status'].'" src="images/iceCreamPL.svg"></span>
+                                    <span class="comment-icon"><img src="images/comment.svg"></span>
+                                </div>
+                                <p class="like-count">'. $num .' Like</p>
+                                <div class="user-comment">
+                                    <p><span class="user-name">Bulma </span> Amazing pic!</p>
+                                </div>
+                                <input type="text" class="comment-input" placeholder="Add comment...">
+                                <button class="comment-btn">Add comment</button>
+                            </div>
+                        </div>';
+        }
+        return $response;
+    }
+
+    public function comment($pPost){
+        if(!empty($pPost['comment'])) {
+            $commentUsrId   = $_SESSION["id"];
+            $commentUsrName = $_SESSION["username"];
+            $comment        = $pPost['comment'];
+            $date           = date("Y-m-d H:i:s");
+            $query = $this->bdd->prepare('INSERT INTO comments (usr_id, usr_name, com_value, com_date) VALUES ("' . $commentUsrId . '","' . $commentUsrName . '", "'. $comment .'", "'. $date .'")');
+            $query->execute();
+
+            $data = [
+                'comment' => $comment,
+                'success'  => true
+            ];
+        } else {
+            $data = [
+                'success' => false
+            ];
+        }
+        $json = json_encode($data);
+        echo($json);
     }
 }

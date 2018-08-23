@@ -77,3 +77,13 @@ header {
     }
   }
 }
+.profil-header {
+  .logout {
+    h3, a{
+      filter: none !important;
+    }
+    .img-container{
+      filter: invert(0) !important;
+    }
+  }
+}

@@ -28,6 +28,10 @@ switch($action){
         break;
     case 'likeImg':
         $cm->likeImg($_POST);
+        break;
+    case 'comment':
+        $cm->comment($_POST);
+        break;
     default:
         $cm=null;
         header('Location:../index.php');

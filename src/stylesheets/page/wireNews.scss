@@ -57,6 +57,7 @@
         .shader-comment {
           padding: 10px;
           font-size: $litle-size;
+          position: relative;
           .action-icon {
             display: flex;
             .like-icon {
@@ -90,6 +91,20 @@
             border: none;
             border-top: 1px solid $purple;
             font-size: $litle-size;
+          }
+          .comment-btn {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            height: 40px;
+            width: 40px;
+            opacity: 0.7;
+            cursor: pointer;
+            border: none;
+            background: url('../images/send-arrow.png');
+            background-position: center;
+            background-size: 50%;
+            background-repeat: no-repeat;
           }
         }
       }

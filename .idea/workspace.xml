@@ -2,21 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6347669a-503a-458d-b650-ae051162b70a" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/scripts/bundle/wireNews.app.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/dist/core/ContentManager.php" afterPath="$PROJECT_DIR$/dist/core/ContentManager.php" />
-      <change beforePath="$PROJECT_DIR$/dist/core/services.php" afterPath="$PROJECT_DIR$/dist/core/services.php" />
-      <change beforePath="$PROJECT_DIR$/dist/index.php" afterPath="$PROJECT_DIR$/dist/index.php" />
-      <change beforePath="$PROJECT_DIR$/dist/profil.php" afterPath="$PROJECT_DIR$/dist/profil.php" />
-      <change beforePath="$PROJECT_DIR$/dist/uploads/avatar/5b3b6224675adgoten.png" afterPath="$PROJECT_DIR$/dist/uploads/avatar/5b3b6224675adgoten.png" />
-      <change beforePath="$PROJECT_DIR$/dist/uploads/avatar/5b71f225da10cbulma019.jpg" afterPath="$PROJECT_DIR$/dist/uploads/avatar/5b71f225da10cbulma019.jpg" />
       <change beforePath="$PROJECT_DIR$/dist/wireNews.php" afterPath="$PROJECT_DIR$/dist/wireNews.php" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/bundle/index.app.js" afterPath="$PROJECT_DIR$/src/scripts/bundle/index.app.js" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/bundle/profil.app.js" afterPath="$PROJECT_DIR$/src/scripts/bundle/profil.app.js" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/main.js" afterPath="$PROJECT_DIR$/src/scripts/main.js" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/objects/Plane/shaders/pVertex.vert" afterPath="$PROJECT_DIR$/src/scripts/objects/Plane/shaders/pVertex.vert" />
-      <change beforePath="$PROJECT_DIR$/src/stylesheets/components/header.scss" afterPath="$PROJECT_DIR$/src/stylesheets/components/header.scss" />
-      <change beforePath="$PROJECT_DIR$/src/stylesheets/page/profil.scss" afterPath="$PROJECT_DIR$/src/stylesheets/page/profil.scss" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/bundle/wireNews.app.js" afterPath="$PROJECT_DIR$/src/scripts/bundle/wireNews.app.js" />
       <change beforePath="$PROJECT_DIR$/src/stylesheets/page/wireNews.scss" afterPath="$PROJECT_DIR$/src/stylesheets/page/wireNews.scss" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,56 +20,70 @@
       <file leaf-file-name="ContentManager.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dist/core/ContentManager.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="497">
-              <caret line="224" column="20" lean-forward="false" selection-start-line="224" selection-start-column="20" selection-end-line="224" selection-end-column="20" />
+            <state relative-caret-position="3135">
+              <caret line="209" column="155" lean-forward="false" selection-start-line="209" selection-start-column="155" selection-end-line="209" selection-end-column="155" />
               <folding>
-                <marker date="1535034062486" expanded="true" signature="1014:1122" ph="INSERT INTO users... " />
-                <marker date="1535034062486" expanded="true" signature="1746:1822" ph="SELECT * FRO... users" />
-                <marker date="1535034062486" expanded="true" signature="3259:3561" ph="INSERT INTO shaders... " />
-                <marker date="1535034062486" expanded="true" signature="3670:3689" ph="SELECT * FRO... users" />
-                <marker date="1535034062486" expanded="true" signature="3844:4265" ph="..." />
-                <marker date="1535034062486" expanded="true" signature="3895:4008" ph="..." />
-                <marker date="1535034062486" expanded="true" signature="4059:4111" ph="..." />
-                <marker date="1535034062486" expanded="true" signature="4059:4119" ph="..." />
-                <marker date="1535034062486" expanded="true" signature="4059:4234" ph="..." />
-                <marker date="1535034062486" expanded="true" signature="4236:4265" ph="..." />
-                <marker date="1535034062486" expanded="true" signature="4385:4517" ph="SELECT * FRO... shaders" />
-                <marker date="1535034062486" expanded="true" signature="4385:4522" ph="SELECT * FRO... shaders" />
-                <marker date="1535034062486" expanded="true" signature="4686:4941" ph="..." />
-                <marker date="1535034062486" expanded="true" signature="4686:4963" ph="..." />
-                <marker date="1535034062486" expanded="true" signature="4686:4968" ph="..." />
-                <marker date="1535034062486" expanded="true" signature="4686:5197" ph="..." />
-                <marker date="1535034062486" expanded="true" signature="4686:5394" ph="..." />
-                <marker date="1535034062486" expanded="true" signature="4743:4862" ph="..." />
-                <marker date="1535034062486" expanded="true" signature="5439:5548" ph="..." />
-                <marker date="1535034062486" expanded="true" signature="5642:5665" ph="SELECT * fro... liked_img" />
-                <marker date="1535034062486" expanded="true" signature="5642:5683" ph="SELECT * fro... liked_img" />
-                <marker date="1535034062486" expanded="true" signature="5642:5684" ph="SELECT * fro... liked_img" />
-                <marker date="1535034062486" expanded="true" signature="5642:5721" ph="SELECT * fro... liked_img" />
-                <marker date="1535034062486" expanded="true" signature="5642:5722" ph="SELECT * fro... liked_img" />
-                <marker date="1535034062486" expanded="true" signature="5642:5723" ph="SELECT * fro... liked_img" />
-                <marker date="1535034062486" expanded="true" signature="5642:5724" ph="SELECT * fro... liked_img" />
-                <marker date="1535034062486" expanded="true" signature="5642:5741" ph="SELECT * fro... liked_img" />
-                <marker date="1535034062486" expanded="true" signature="5642:5743" ph="SELECT * fro... liked_img" />
-                <marker date="1535034062486" expanded="true" signature="5928:5960" ph="UPDATE liked_img... " />
-                <marker date="1535034062486" expanded="true" signature="5928:5961" ph="UPDATE liked_img... " />
-                <marker date="1535034062486" expanded="true" signature="5928:5995" ph="UPDATE liked_img... " />
-                <marker date="1535034062486" expanded="true" signature="5928:5996" ph="UPDATE liked_img... " />
-                <marker date="1535034062486" expanded="true" signature="5928:5997" ph="UPDATE liked_img... " />
-                <marker date="1535034062486" expanded="true" signature="6108:6240" ph="INSERT INTO liked_img... " />
-                <marker date="1535034062486" expanded="true" signature="6362:6437" ph="SELECT * FRO... liked_img" />
-                <marker date="1535034062486" expanded="true" signature="6751:6898" ph="SELECT * FRO... shaders" />
-                <marker date="1535034062486" expanded="true" signature="7051:7092" ph="SELECT * FRO... liked_img" />
-                <marker date="1535034062486" expanded="true" signature="7282:8758" ph="..." />
-                <marker date="1535034062486" expanded="true" signature="7338:7614" ph="..." />
-                <marker date="1535034062486" expanded="true" signature="7393:7516" ph="..." />
-                <marker date="1535034062486" expanded="true" signature="7680:7799" ph="..." />
-                <marker date="1535034062486" expanded="true" signature="7856:8727" ph="..." />
-                <marker date="1535034062486" expanded="true" signature="7914:8242" ph="..." />
-                <marker date="1535034062486" expanded="true" signature="8375:8508" ph="..." />
-                <marker date="1535034062486" expanded="true" signature="9124:9245" ph="INSERT INTO comments... " />
-                <marker date="1535034062486" expanded="true" signature="9124:9263" ph="INSERT INTO comments... " />
-                <marker date="1535034062486" expanded="true" signature="9124:9276" ph="INSERT INTO users... " />
+                <marker date="1535114149195" expanded="true" signature="1014:1122" ph="INSERT INTO users... " />
+                <marker date="1535114149195" expanded="true" signature="1746:1822" ph="SELECT * FRO... users" />
+                <marker date="1535114149195" expanded="true" signature="3259:3561" ph="INSERT INTO shaders... " />
+                <marker date="1535114149195" expanded="true" signature="3670:3689" ph="SELECT * FRO... users" />
+                <marker date="1535114149195" expanded="true" signature="3844:4265" ph="..." />
+                <marker date="1535114149195" expanded="true" signature="3895:4008" ph="..." />
+                <marker date="1535114149195" expanded="true" signature="4059:4111" ph="..." />
+                <marker date="1535114149195" expanded="true" signature="4059:4119" ph="..." />
+                <marker date="1535114149195" expanded="true" signature="4059:4234" ph="..." />
+                <marker date="1535114149195" expanded="true" signature="4236:4265" ph="..." />
+                <marker date="1535114149195" expanded="true" signature="4385:4517" ph="SELECT * FRO... shaders" />
+                <marker date="1535114149195" expanded="true" signature="4385:4522" ph="SELECT * FRO... shaders" />
+                <marker date="1535114149195" expanded="true" signature="4686:4941" ph="..." />
+                <marker date="1535114149195" expanded="true" signature="4686:4963" ph="..." />
+                <marker date="1535114149195" expanded="true" signature="4686:4968" ph="..." />
+                <marker date="1535114149195" expanded="true" signature="4686:5197" ph="..." />
+                <marker date="1535114149195" expanded="true" signature="4686:5394" ph="..." />
+                <marker date="1535114149195" expanded="true" signature="4743:4862" ph="..." />
+                <marker date="1535114149195" expanded="true" signature="5439:5548" ph="..." />
+                <marker date="1535114149195" expanded="true" signature="5642:5665" ph="SELECT * fro... liked_img" />
+                <marker date="1535114149195" expanded="true" signature="5642:5683" ph="SELECT * fro... liked_img" />
+                <marker date="1535114149195" expanded="true" signature="5642:5684" ph="SELECT * fro... liked_img" />
+                <marker date="1535114149195" expanded="true" signature="5642:5721" ph="SELECT * fro... liked_img" />
+                <marker date="1535114149195" expanded="true" signature="5642:5722" ph="SELECT * fro... liked_img" />
+                <marker date="1535114149195" expanded="true" signature="5642:5723" ph="SELECT * fro... liked_img" />
+                <marker date="1535114149195" expanded="true" signature="5642:5724" ph="SELECT * fro... liked_img" />
+                <marker date="1535114149195" expanded="true" signature="5642:5741" ph="SELECT * fro... liked_img" />
+                <marker date="1535114149195" expanded="true" signature="5642:5743" ph="SELECT * fro... liked_img" />
+                <marker date="1535114149195" expanded="true" signature="5928:5960" ph="UPDATE liked_img... " />
+                <marker date="1535114149195" expanded="true" signature="5928:5961" ph="UPDATE liked_img... " />
+                <marker date="1535114149195" expanded="true" signature="5928:5995" ph="UPDATE liked_img... " />
+                <marker date="1535114149195" expanded="true" signature="5928:5996" ph="UPDATE liked_img... " />
+                <marker date="1535114149195" expanded="true" signature="5928:5997" ph="UPDATE liked_img... " />
+                <marker date="1535114149195" expanded="true" signature="6108:6240" ph="INSERT INTO liked_img... " />
+                <marker date="1535114149195" expanded="true" signature="6362:6437" ph="SELECT * FRO... liked_img" />
+                <marker date="1535114149195" expanded="true" signature="6753:6900" ph="SELECT * FRO... shaders" />
+                <marker date="1535114149195" expanded="true" signature="6942:7030" ph="SELECT * FRO... shaders" />
+                <marker date="1535114149195" expanded="true" signature="7183:7224" ph="SELECT * FRO... liked_img" />
+                <marker date="1535114149195" expanded="true" signature="7183:7264" ph="SELECT * FRO... liked_img" />
+                <marker date="1535114149195" expanded="true" signature="7183:7266" ph="SELECT * FRO... liked_img" />
+                <marker date="1535114149195" expanded="true" signature="7436:9846" ph="..." />
+                <marker date="1535114149195" expanded="true" signature="7436:9877" ph="..." />
+                <marker date="1535114149195" expanded="true" signature="7492:7768" ph="..." />
+                <marker date="1535114149195" expanded="true" signature="7547:7670" ph="..." />
+                <marker date="1535114149195" expanded="true" signature="7834:7953" ph="..." />
+                <marker date="1535114149195" expanded="true" signature="8010:8068" ph="..." />
+                <marker date="1535114149195" expanded="true" signature="8010:8069" ph="..." />
+                <marker date="1535114149195" expanded="true" signature="8010:9543" ph="..." />
+                <marker date="1535114149195" expanded="true" signature="8010:9769" ph="..." />
+                <marker date="1535114149195" expanded="true" signature="8010:9775" ph="..." />
+                <marker date="1535114149195" expanded="true" signature="8010:9780" ph="..." />
+                <marker date="1535114149195" expanded="true" signature="8010:9813" ph="..." />
+                <marker date="1535114149195" expanded="true" signature="8010:9846" ph="..." />
+                <marker date="1535114149195" expanded="true" signature="8068:8069" ph="..." />
+                <marker date="1535114149195" expanded="true" signature="8135:8215" ph="SELECT * FRO... liked_img" />
+                <marker date="1535114149195" expanded="true" signature="8892:8957" ph="..." />
+                <marker date="1535114149195" expanded="true" signature="9025:9062" ph="SELECT * FRO... comments" />
+                <marker date="1535114149195" expanded="true" signature="9505:9543" ph="..." />
+                <marker date="1535114149195" expanded="true" signature="10286:10432" ph="INSERT INTO comments... " />
+                <marker date="1535114149195" expanded="true" signature="10286:10450" ph="INSERT INTO comments... " />
+                <marker date="1535114149195" expanded="true" signature="10286:10463" ph="INSERT INTO users... " />
               </folding>
             </state>
           </provider>
@@ -106,21 +109,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profil.app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/scripts/bundle/profil.app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-362">
-              <caret line="16" column="75" lean-forward="false" selection-start-line="16" selection-start-column="75" selection-end-line="16" selection-end-column="75" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="wireNews.app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/scripts/bundle/wireNews.app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="71" column="5" lean-forward="true" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
+            <state relative-caret-position="-486">
+              <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -139,17 +132,27 @@
       <file leaf-file-name="wireNews.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dist/wireNews.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1339">
-              <caret line="159" column="25" lean-forward="false" selection-start-line="159" selection-start-column="25" selection-end-line="159" selection-end-column="25" />
+            <state relative-caret-position="1105">
+              <caret line="90" column="22" lean-forward="false" selection-start-line="82" selection-start-column="16" selection-end-line="90" selection-end-column="22" />
               <folding>
-                <marker date="1535025844743" expanded="true" signature="643:989" ph="..." />
-                <marker date="1535025844743" expanded="true" signature="683:833" ph="..." />
-                <marker date="1535025844743" expanded="true" signature="721:814" ph="..." />
-                <marker date="1535025844743" expanded="true" signature="914:973" ph="..." />
-                <marker date="1535025844743" expanded="true" signature="1417:1746" ph="..." />
-                <marker date="1535025844743" expanded="true" signature="1456:1551" ph="..." />
-                <marker date="1535025844743" expanded="true" signature="1590:1727" ph="..." />
+                <marker date="1535097150005" expanded="true" signature="643:989" ph="..." />
+                <marker date="1535097150005" expanded="true" signature="683:833" ph="..." />
+                <marker date="1535097150005" expanded="true" signature="721:814" ph="..." />
+                <marker date="1535097150005" expanded="true" signature="914:973" ph="..." />
+                <marker date="1535097150005" expanded="true" signature="1418:1747" ph="..." />
+                <marker date="1535097150005" expanded="true" signature="1457:1552" ph="..." />
+                <marker date="1535097150005" expanded="true" signature="1591:1728" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wireNews.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/stylesheets/page/wireNews.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1590">
+              <caret line="106" column="40" lean-forward="false" selection-start-line="106" selection-start-column="40" selection-end-line="106" selection-end-column="40" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -158,8 +161,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>last</find>
-      <find>lastLat</find>
       <find>lontitude</find>
       <find>uFul</find>
       <find>shader-content</find>
@@ -188,6 +189,8 @@
       <find>date</find>
       <find>t++</find>
       <find>$data</find>
+      <find>path</find>
+      <find>shader-comment</find>
     </findStrings>
     <replaceStrings>
       <replace>this</replace>
@@ -235,7 +238,6 @@
         <option value="$PROJECT_DIR$/src/scripts/bundle/index.app.js" />
         <option value="$PROJECT_DIR$/dist/index.php" />
         <option value="$PROJECT_DIR$/src/stylesheets/components/header.scss" />
-        <option value="$PROJECT_DIR$/src/scripts/bundle/profil.app.js" />
         <option value="$PROJECT_DIR$/src/scripts/Webgl.js" />
         <option value="$PROJECT_DIR$/src/scripts/objects/Plane/index.js" />
         <option value="$PROJECT_DIR$/src/scripts/objects/Plane/shaders/pVertex.vert" />
@@ -244,11 +246,12 @@
         <option value="$PROJECT_DIR$/src/scripts/State.js" />
         <option value="$PROJECT_DIR$/src/scripts/objects/Plane/shaders/pFragment.frag" />
         <option value="$PROJECT_DIR$/src/scripts/main.js" />
-        <option value="$PROJECT_DIR$/src/stylesheets/page/wireNews.scss" />
-        <option value="$PROJECT_DIR$/dist/wireNews.php" />
         <option value="$PROJECT_DIR$/dist/core/services.php" />
-        <option value="$PROJECT_DIR$/dist/core/ContentManager.php" />
+        <option value="$PROJECT_DIR$/dist/wireNews.php" />
+        <option value="$PROJECT_DIR$/src/scripts/bundle/profil.app.js" />
         <option value="$PROJECT_DIR$/src/scripts/bundle/wireNews.app.js" />
+        <option value="$PROJECT_DIR$/dist/core/ContentManager.php" />
+        <option value="$PROJECT_DIR$/src/stylesheets/page/wireNews.scss" />
       </list>
     </option>
   </component>
@@ -482,16 +485,15 @@
       <workItem from="1533540571789" duration="2691000" />
       <workItem from="1533885606951" duration="16358000" />
       <workItem from="1534067134180" duration="30211000" />
-      <workItem from="1534793339795" duration="13862000" />
+      <workItem from="1534793339795" duration="27318000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="175389000" />
+    <option name="totallyTimeSpent" value="188845000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -861,22 +863,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="20" column="26" lean-forward="false" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/stylesheets/page/wireNews.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="108" column="22" lean-forward="false" selection-start-line="108" selection-start-column="22" selection-end-line="108" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scripts/bundle/index.app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="167">
@@ -895,88 +881,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/wireNews.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1339">
-          <caret line="159" column="25" lean-forward="false" selection-start-line="159" selection-start-column="25" selection-end-line="159" selection-end-column="25" />
+        <state relative-caret-position="1105">
+          <caret line="90" column="22" lean-forward="false" selection-start-line="82" selection-start-column="16" selection-end-line="90" selection-end-column="22" />
           <folding>
-            <marker date="1535025844743" expanded="true" signature="643:989" ph="..." />
-            <marker date="1535025844743" expanded="true" signature="683:833" ph="..." />
-            <marker date="1535025844743" expanded="true" signature="721:814" ph="..." />
-            <marker date="1535025844743" expanded="true" signature="914:973" ph="..." />
-            <marker date="1535025844743" expanded="true" signature="1417:1746" ph="..." />
-            <marker date="1535025844743" expanded="true" signature="1456:1551" ph="..." />
-            <marker date="1535025844743" expanded="true" signature="1590:1727" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/core/services.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="32" column="29" lean-forward="false" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/bundle/profil.app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-362">
-          <caret line="16" column="75" lean-forward="false" selection-start-line="16" selection-start-column="75" selection-end-line="16" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/core/ContentManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="224" column="20" lean-forward="false" selection-start-line="224" selection-start-column="20" selection-end-line="224" selection-end-column="20" />
-          <folding>
-            <marker date="1535034062486" expanded="true" signature="1014:1122" ph="INSERT INTO users... " />
-            <marker date="1535034062486" expanded="true" signature="1746:1822" ph="SELECT * FRO... users" />
-            <marker date="1535034062486" expanded="true" signature="3259:3561" ph="INSERT INTO shaders... " />
-            <marker date="1535034062486" expanded="true" signature="3670:3689" ph="SELECT * FRO... users" />
-            <marker date="1535034062486" expanded="true" signature="3844:4265" ph="..." />
-            <marker date="1535034062486" expanded="true" signature="3895:4008" ph="..." />
-            <marker date="1535034062486" expanded="true" signature="4059:4111" ph="..." />
-            <marker date="1535034062486" expanded="true" signature="4059:4119" ph="..." />
-            <marker date="1535034062486" expanded="true" signature="4059:4234" ph="..." />
-            <marker date="1535034062486" expanded="true" signature="4236:4265" ph="..." />
-            <marker date="1535034062486" expanded="true" signature="4385:4517" ph="SELECT * FRO... shaders" />
-            <marker date="1535034062486" expanded="true" signature="4385:4522" ph="SELECT * FRO... shaders" />
-            <marker date="1535034062486" expanded="true" signature="4686:4941" ph="..." />
-            <marker date="1535034062486" expanded="true" signature="4686:4963" ph="..." />
-            <marker date="1535034062486" expanded="true" signature="4686:4968" ph="..." />
-            <marker date="1535034062486" expanded="true" signature="4686:5197" ph="..." />
-            <marker date="1535034062486" expanded="true" signature="4686:5394" ph="..." />
-            <marker date="1535034062486" expanded="true" signature="4743:4862" ph="..." />
-            <marker date="1535034062486" expanded="true" signature="5439:5548" ph="..." />
-            <marker date="1535034062486" expanded="true" signature="5642:5665" ph="SELECT * fro... liked_img" />
-            <marker date="1535034062486" expanded="true" signature="5642:5683" ph="SELECT * fro... liked_img" />
-            <marker date="1535034062486" expanded="true" signature="5642:5684" ph="SELECT * fro... liked_img" />
-            <marker date="1535034062486" expanded="true" signature="5642:5721" ph="SELECT * fro... liked_img" />
-            <marker date="1535034062486" expanded="true" signature="5642:5722" ph="SELECT * fro... liked_img" />
-            <marker date="1535034062486" expanded="true" signature="5642:5723" ph="SELECT * fro... liked_img" />
-            <marker date="1535034062486" expanded="true" signature="5642:5724" ph="SELECT * fro... liked_img" />
-            <marker date="1535034062486" expanded="true" signature="5642:5741" ph="SELECT * fro... liked_img" />
-            <marker date="1535034062486" expanded="true" signature="5642:5743" ph="SELECT * fro... liked_img" />
-            <marker date="1535034062486" expanded="true" signature="5928:5960" ph="UPDATE liked_img... " />
-            <marker date="1535034062486" expanded="true" signature="5928:5961" ph="UPDATE liked_img... " />
-            <marker date="1535034062486" expanded="true" signature="5928:5995" ph="UPDATE liked_img... " />
-            <marker date="1535034062486" expanded="true" signature="5928:5996" ph="UPDATE liked_img... " />
-            <marker date="1535034062486" expanded="true" signature="5928:5997" ph="UPDATE liked_img... " />
-            <marker date="1535034062486" expanded="true" signature="6108:6240" ph="INSERT INTO liked_img... " />
-            <marker date="1535034062486" expanded="true" signature="6362:6437" ph="SELECT * FRO... liked_img" />
-            <marker date="1535034062486" expanded="true" signature="6751:6898" ph="SELECT * FRO... shaders" />
-            <marker date="1535034062486" expanded="true" signature="7051:7092" ph="SELECT * FRO... liked_img" />
-            <marker date="1535034062486" expanded="true" signature="7282:8758" ph="..." />
-            <marker date="1535034062486" expanded="true" signature="7338:7614" ph="..." />
-            <marker date="1535034062486" expanded="true" signature="7393:7516" ph="..." />
-            <marker date="1535034062486" expanded="true" signature="7680:7799" ph="..." />
-            <marker date="1535034062486" expanded="true" signature="7856:8727" ph="..." />
-            <marker date="1535034062486" expanded="true" signature="7914:8242" ph="..." />
-            <marker date="1535034062486" expanded="true" signature="8375:8508" ph="..." />
-            <marker date="1535034062486" expanded="true" signature="9124:9245" ph="INSERT INTO comments... " />
-            <marker date="1535034062486" expanded="true" signature="9124:9263" ph="INSERT INTO comments... " />
-            <marker date="1535034062486" expanded="true" signature="9124:9276" ph="INSERT INTO users... " />
+            <marker date="1535097150005" expanded="true" signature="643:989" ph="..." />
+            <marker date="1535097150005" expanded="true" signature="683:833" ph="..." />
+            <marker date="1535097150005" expanded="true" signature="721:814" ph="..." />
+            <marker date="1535097150005" expanded="true" signature="914:973" ph="..." />
+            <marker date="1535097150005" expanded="true" signature="1418:1747" ph="..." />
+            <marker date="1535097150005" expanded="true" signature="1457:1552" ph="..." />
+            <marker date="1535097150005" expanded="true" signature="1591:1728" ph="..." />
           </folding>
         </state>
       </provider>
@@ -989,10 +903,112 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/bundle/profil.app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="38" column="27" lean-forward="false" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stylesheets/page/wireNews.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1590">
+          <caret line="106" column="40" lean-forward="false" selection-start-line="106" selection-start-column="40" selection-end-line="106" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/core/ContentManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3135">
+          <caret line="209" column="155" lean-forward="false" selection-start-line="209" selection-start-column="155" selection-end-line="209" selection-end-column="155" />
+          <folding>
+            <marker date="1535114149195" expanded="true" signature="1014:1122" ph="INSERT INTO users... " />
+            <marker date="1535114149195" expanded="true" signature="1746:1822" ph="SELECT * FRO... users" />
+            <marker date="1535114149195" expanded="true" signature="3259:3561" ph="INSERT INTO shaders... " />
+            <marker date="1535114149195" expanded="true" signature="3670:3689" ph="SELECT * FRO... users" />
+            <marker date="1535114149195" expanded="true" signature="3844:4265" ph="..." />
+            <marker date="1535114149195" expanded="true" signature="3895:4008" ph="..." />
+            <marker date="1535114149195" expanded="true" signature="4059:4111" ph="..." />
+            <marker date="1535114149195" expanded="true" signature="4059:4119" ph="..." />
+            <marker date="1535114149195" expanded="true" signature="4059:4234" ph="..." />
+            <marker date="1535114149195" expanded="true" signature="4236:4265" ph="..." />
+            <marker date="1535114149195" expanded="true" signature="4385:4517" ph="SELECT * FRO... shaders" />
+            <marker date="1535114149195" expanded="true" signature="4385:4522" ph="SELECT * FRO... shaders" />
+            <marker date="1535114149195" expanded="true" signature="4686:4941" ph="..." />
+            <marker date="1535114149195" expanded="true" signature="4686:4963" ph="..." />
+            <marker date="1535114149195" expanded="true" signature="4686:4968" ph="..." />
+            <marker date="1535114149195" expanded="true" signature="4686:5197" ph="..." />
+            <marker date="1535114149195" expanded="true" signature="4686:5394" ph="..." />
+            <marker date="1535114149195" expanded="true" signature="4743:4862" ph="..." />
+            <marker date="1535114149195" expanded="true" signature="5439:5548" ph="..." />
+            <marker date="1535114149195" expanded="true" signature="5642:5665" ph="SELECT * fro... liked_img" />
+            <marker date="1535114149195" expanded="true" signature="5642:5683" ph="SELECT * fro... liked_img" />
+            <marker date="1535114149195" expanded="true" signature="5642:5684" ph="SELECT * fro... liked_img" />
+            <marker date="1535114149195" expanded="true" signature="5642:5721" ph="SELECT * fro... liked_img" />
+            <marker date="1535114149195" expanded="true" signature="5642:5722" ph="SELECT * fro... liked_img" />
+            <marker date="1535114149195" expanded="true" signature="5642:5723" ph="SELECT * fro... liked_img" />
+            <marker date="1535114149195" expanded="true" signature="5642:5724" ph="SELECT * fro... liked_img" />
+            <marker date="1535114149195" expanded="true" signature="5642:5741" ph="SELECT * fro... liked_img" />
+            <marker date="1535114149195" expanded="true" signature="5642:5743" ph="SELECT * fro... liked_img" />
+            <marker date="1535114149195" expanded="true" signature="5928:5960" ph="UPDATE liked_img... " />
+            <marker date="1535114149195" expanded="true" signature="5928:5961" ph="UPDATE liked_img... " />
+            <marker date="1535114149195" expanded="true" signature="5928:5995" ph="UPDATE liked_img... " />
+            <marker date="1535114149195" expanded="true" signature="5928:5996" ph="UPDATE liked_img... " />
+            <marker date="1535114149195" expanded="true" signature="5928:5997" ph="UPDATE liked_img... " />
+            <marker date="1535114149195" expanded="true" signature="6108:6240" ph="INSERT INTO liked_img... " />
+            <marker date="1535114149195" expanded="true" signature="6362:6437" ph="SELECT * FRO... liked_img" />
+            <marker date="1535114149195" expanded="true" signature="6753:6900" ph="SELECT * FRO... shaders" />
+            <marker date="1535114149195" expanded="true" signature="6942:7030" ph="SELECT * FRO... shaders" />
+            <marker date="1535114149195" expanded="true" signature="7183:7224" ph="SELECT * FRO... liked_img" />
+            <marker date="1535114149195" expanded="true" signature="7183:7264" ph="SELECT * FRO... liked_img" />
+            <marker date="1535114149195" expanded="true" signature="7183:7266" ph="SELECT * FRO... liked_img" />
+            <marker date="1535114149195" expanded="true" signature="7436:9846" ph="..." />
+            <marker date="1535114149195" expanded="true" signature="7436:9877" ph="..." />
+            <marker date="1535114149195" expanded="true" signature="7492:7768" ph="..." />
+            <marker date="1535114149195" expanded="true" signature="7547:7670" ph="..." />
+            <marker date="1535114149195" expanded="true" signature="7834:7953" ph="..." />
+            <marker date="1535114149195" expanded="true" signature="8010:8068" ph="..." />
+            <marker date="1535114149195" expanded="true" signature="8010:8069" ph="..." />
+            <marker date="1535114149195" expanded="true" signature="8010:9543" ph="..." />
+            <marker date="1535114149195" expanded="true" signature="8010:9769" ph="..." />
+            <marker date="1535114149195" expanded="true" signature="8010:9775" ph="..." />
+            <marker date="1535114149195" expanded="true" signature="8010:9780" ph="..." />
+            <marker date="1535114149195" expanded="true" signature="8010:9813" ph="..." />
+            <marker date="1535114149195" expanded="true" signature="8010:9846" ph="..." />
+            <marker date="1535114149195" expanded="true" signature="8068:8069" ph="..." />
+            <marker date="1535114149195" expanded="true" signature="8135:8215" ph="SELECT * FRO... liked_img" />
+            <marker date="1535114149195" expanded="true" signature="8892:8957" ph="..." />
+            <marker date="1535114149195" expanded="true" signature="9025:9062" ph="SELECT * FRO... comments" />
+            <marker date="1535114149195" expanded="true" signature="9505:9543" ph="..." />
+            <marker date="1535114149195" expanded="true" signature="10286:10432" ph="INSERT INTO comments... " />
+            <marker date="1535114149195" expanded="true" signature="10286:10450" ph="INSERT INTO comments... " />
+            <marker date="1535114149195" expanded="true" signature="10286:10463" ph="INSERT INTO users... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/core/services.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="32" column="29" lean-forward="false" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" column="26" lean-forward="false" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/scripts/bundle/wireNews.app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="71" column="5" lean-forward="true" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
+        <state relative-caret-position="-486">
+          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
           <folding />
         </state>
       </provider>

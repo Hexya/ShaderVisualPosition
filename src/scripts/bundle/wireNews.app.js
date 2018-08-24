@@ -42,20 +42,27 @@ class WireNews {
     }
 
     onLikeBtn(el) {
-        console.log(el.path[0].getAttribute('value'))
+        //console.log(el.path[3].querySelector('.comment-btn').getAttribute('data-like'))
         var status = 0;
+        var likes = el.path[3].querySelector('.comment-btn').getAttribute('data-like');
         if(el.path[0].getAttribute('status') == 0) {
             el.path[0].setAttribute('src','images/iceCreamLL.svg');
             el.path[0].classList.add('liked');
             el.path[0].setAttribute('status', 1);
             status = 1;
+            likes ++;
         } else {
+            console.log('like' + likes)
             el.path[0].setAttribute('src','images/iceCreamPL.svg');
             el.path[0].setAttribute('status', 0);
             el.path[0].classList.remove('liked');
             status = 0;
+            likes --;
         }
-        console.log(el.path[0].getAttribute('status'))
+        el.path[0].setAttribute('data-like', likes)
+        var likeparent =el.path[0].parentNode;
+        likeparent.parentNode.parentNode.querySelector('.like-count').innerHTML= likes + ' Like';
+        //console.log(el.path[0].getAttribute('status'))
         const data = new FormData();
         data.append('imgId', el.path[0].getAttribute('value'));
         data.append('status', status);
@@ -68,7 +75,7 @@ class WireNews {
     }
 
     onResponse(callback) {
-        console.log(callback);
+        //console.log(callback);
     }
 
     onSubmitBtnClick(event) {
@@ -76,11 +83,15 @@ class WireNews {
         const data = new FormData();
         data.append('comment', event.target.parentNode.querySelector('.comment-input').value);
         data.append('action', 'comment');
+        data.append('id', event.target.getAttribute('data-id'));
+        event.target.parentNode.querySelector('.comments-container').innerHTML += '<p><span class="user-name">'+ event.target.getAttribute('data-name') +' </span> '+event.target.parentNode.querySelector('.comment-input').value +'</p>';
 
         this.xhr = new XMLHttpRequest();
         this.xhr.open('POST', 'core/services.php', true);
         this.xhr.onload = this.onResponseCom;
         this.xhr.send(data);
+
+        event.target.parentNode.querySelector('.comment-input').value = '';
     }
 
     onResponseCom() {

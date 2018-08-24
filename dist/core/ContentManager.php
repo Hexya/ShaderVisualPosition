@@ -166,12 +166,13 @@ Class ContentManager{
     }
 
     public function getAllShaders() {
-        $query = $this->bdd->prepare('SELECT * FROM shaders LEFT JOIN liked_img ON shaders.sh_id = liked_img.li_img_id LEFT JOIN users ON shaders.usr_id = users.id ORDER BY sh_date DESC');
+        //$query = $this->bdd->prepare('SELECT * FROM shaders LEFT JOIN liked_img ON shaders.sh_id = liked_img.li_img_id LEFT JOIN users ON shaders.usr_id = users.id ORDER BY sh_date DESC');
+        $query = $this->bdd->prepare('SELECT * FROM shaders LEFT JOIN users ON shaders.usr_id = users.id ORDER BY sh_date DESC');
         $query->execute();
 
         $results = $query->fetchAll();
         foreach($results as $shader) {
-            $query2 = $this->bdd->prepare('SELECT * FROM liked_img WHERE li_img_id ='. $shader['sh_id']);
+            $query2 = $this->bdd->prepare('SELECT * FROM liked_img WHERE li_img_id ='. $shader['sh_id'] .' AND li_status = 1');
             $query2->execute();
             $results2 = $query2->fetchAll();
             $num = count($results2);
@@ -187,16 +188,26 @@ Class ContentManager{
                                 <img src="uploads/shaders/'.$shader['sh_media'].'">
                             </div>
                             <div class="shader-comment">
-                                <div class="action-icon">
-                                    <span class="like-icon"><img class="litle-ice-cream" value="'.$shader['sh_id'].'" status="'.$shader['li_status'].'" src="images/iceCreamPL.svg"></span>
+                                <div class="action-icon">';
+                                $query4 = $this->bdd->prepare('SELECT * FROM liked_img WHERE li_usr_id = ' .$_SESSION['id'] .' AND li_img_id = '. $shader['sh_id']); // Requete sur le status de l'image en fonction de l'id l'utilisateur
+                                $query4->execute();
+                                $results4 = $query4->fetch();
+                                $response .= '<span class="like-icon"><img class="litle-ice-cream" value="'.$shader['sh_id'].'" status="'.$results4['li_status'].'" src="images/iceCreamPL.svg"></span>
                                     <span class="comment-icon"><img src="images/comment.svg"></span>
                                 </div>
                                 <p class="like-count">'. $num .' Like</p>
                                 <div class="user-comment">
-                                    <p><span class="user-name">Bulma </span> Amazing pic!</p>
+                                <div class="comments-container">';
+                                 $query3 = $this->bdd->prepare('SELECT * FROM comments WHERE sh_id = '. $shader['sh_id']);
+                                 $query3->execute();
+                                 $comments = $query3->fetchAll();
+                                 foreach ($comments as $comment) {
+                                     $response .= '<p><span class="user-name">'. $comment['usr_name'] .' </span> '. $comment['com_value'] .'</p>';
+                                 }
+                                 $response .= '</div>
                                 </div>
                                 <input type="text" class="comment-input" placeholder="Add comment...">
-                                <button class="comment-btn">Add comment</button>
+                                <button data-like="'.$num.'"  data-name="'. $_SESSION["username"] .'" data-id="'. $shader['sh_id'] .'" class="comment-btn"></button>
                             </div>
                         </div>';
         }
@@ -208,12 +219,14 @@ Class ContentManager{
             $commentUsrId   = $_SESSION["id"];
             $commentUsrName = $_SESSION["username"];
             $comment        = $pPost['comment'];
+            $dataId        = $pPost['id'];
             $date           = date("Y-m-d H:i:s");
-            $query = $this->bdd->prepare('INSERT INTO comments (usr_id, usr_name, com_value, com_date) VALUES ("' . $commentUsrId . '","' . $commentUsrName . '", "'. $comment .'", "'. $date .'")');
+            $query = $this->bdd->prepare('INSERT INTO comments (usr_id, usr_name, sh_id, com_value, com_date) VALUES ("' . $commentUsrId . '","' . $commentUsrName . '","' . $dataId . '", "'. $comment .'", "'. $date .'")');
             $query->execute();
 
             $data = [
                 'comment' => $comment,
+                'id' => $dataId,
                 'success'  => true
             ];
         } else {

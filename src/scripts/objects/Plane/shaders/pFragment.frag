@@ -106,7 +106,7 @@ uniform float uLastLon;
 varying vec3 vPosition;
 
 /**
-* Material gradient whith shaderific mix function et le snoise
+* Material gradient whith shaderific mix function and snoise
 */
 void main() {
 
@@ -122,6 +122,19 @@ void main() {
     vec3 color6 = mix(color4,color5,snoise(vPosition * 0.01 + uTime));
 
     vec3 color = mix(color3,color6,snoise(vPosition * 0.01 + uTime));
+
+    /*vec3 color1 = vec3(uLon, uLat, uLon);
+    vec3 color2 = vec3(uLat, uLon, uLat);
+
+    vec3 color3 = mix(color1,color2,snoise(vPosition * 0.01 + uTime));
+
+
+    vec3 color4 = vec3(uLat, uLat, uLon);
+    vec3 color5 = vec3(uLon, uLon, uLat);
+
+    vec3 color6 = mix(color4,color5,snoise(vPosition * 0.01 + uTime));
+
+    vec3 color = mix(color3,color6,snoise(vPosition * 0.01 + uTime));*/
 
     //vec3 color = vec3(1.,0.,0.);
     float alpha = 1.;

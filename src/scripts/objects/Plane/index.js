@@ -64,6 +64,8 @@ export default class Plane extends THREE.Object3D {
         let uLastLon = State.latitude + ''
         uLastLon = uLastLon.slice(-1);
         this.material.uniforms.uLastLon.value = uLastLon;
+        //this.material.uniforms.uLon.value = Math.abs(State.longitude / 180);
+        //this.material.uniforms.uLat.value = Math.abs(State.latitude / 90);
         this.material.uniforms.uTime.value = time * 0.05;
         this.rotation.z += 0.001;
     }

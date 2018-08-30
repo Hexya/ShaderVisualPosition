@@ -3,14 +3,28 @@ import State from '../State';
 
 let wrapper = document.querySelectorAll('.experience-wrapper-container');
 
+/**
+ * Experience class
+ */
 class Experience {
 
+    /**
+     * @function
+     * @name constructor
+     * Constructor
+     */
     constructor() {
         this.registerDOM();
         this.createComponents();
         this.registerEvents();
     }
 
+    /**
+     * @function
+     * @name registerDom
+     * Dom elements
+     * Get the Dom button and canvas element
+     */
     registerDOM() {
         this.elt = wrapper[0];
         this.elts = {};
@@ -18,14 +32,30 @@ class Experience {
         this.elts.canvas = document.body.querySelector('canvas');
     }
 
+    /**
+     * @function
+     * @name registerEvents
+     * Events listener
+     * Bind the click on the corresponding button
+     */
     registerEvents() {
         this.elts.saveBtn.addEventListener('click', this.onSaveBtnClick.bind(this));
     }
 
+    /**
+     * @function
+     * @name createComponents
+     * Init Coordinate
+     */
     createComponents() {
         this.coordinates = new Coordinate();
     }
 
+    /**
+     * @function
+     * @name onSaveBtnClick
+     * Save canvas Shader and stats on click
+     */
     onSaveBtnClick() {
         this.savedData = this.elts.canvas.toDataURL('image/jpeg', .7);
         const data = new FormData();
@@ -51,6 +81,9 @@ class Experience {
 
 }
 
+/**
+ * Check if the page exist
+ */
 if(wrapper.length > 0) {
     new Experience();
 }

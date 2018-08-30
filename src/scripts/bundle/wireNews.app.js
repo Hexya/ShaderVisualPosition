@@ -2,14 +2,28 @@ import State from "../State";
 
 let wrapper = document.querySelectorAll('.wire-news-wrapper-container');
 
+/**
+ * Wire news Page
+ */
 class WireNews {
 
+    /**
+     * @function
+     * @name constructor
+     * Constructor
+     */
     constructor() {
         this.registerDOM();
         this.registerEvents();
         this.updateLikeImg();
     }
 
+    /**
+     * @function
+     * @name registerDom
+     * Dom elements
+     * Get the Dom button element
+     */
     registerDOM() {
         this.elt = wrapper[0];
         this.elts = {};
@@ -20,6 +34,12 @@ class WireNews {
         this.elts.commentInput = this.elt.querySelectorAll('.comment-input');
     }
 
+    /**
+     * @function
+     * @name registerEvents
+     * Events listener
+     * Bind the click on the corresponding button
+     */
     registerEvents() {
         for(var i=0; i<this.elts.like.length; i++) {
             this.elts.like[i].addEventListener('click', this.onLikeBtn.bind(this));
@@ -30,6 +50,11 @@ class WireNews {
         }
     }
 
+    /**
+     * @function
+     * @name updateLikeImg
+     * Update image on like
+     */
     updateLikeImg(){
         for(var i=0; i<this.elts.like.length; i++) {
             if (this.elts.like[i].getAttribute('status') == 0) {
@@ -41,6 +66,12 @@ class WireNews {
         }
     }
 
+    /**
+     * @function
+     * @name onLikeBtn
+     * Like button click action
+     * @param el - The like button clicked
+     */
     onLikeBtn(el) {
         //console.log(el.path[3].querySelector('.comment-btn').getAttribute('data-like'))
         var status = 0;
@@ -74,10 +105,22 @@ class WireNews {
         this.xhr.send(data);
     }
 
-    onResponse(callback) {
-        //console.log(callback);
+    /**
+     * @function
+     * @name onResponse
+     * Xhr response like info
+     * @param response - request return
+     */
+    onResponse(response) {
+        //console.log(response);
     }
 
+    /**
+     * @function
+     * @name onSubmitBtnClick
+     * Submit comment action
+     * @param event - the input action target
+     */
     onSubmitBtnClick(event) {
         event.preventDefault();
         const data = new FormData();
@@ -94,12 +137,21 @@ class WireNews {
         event.target.parentNode.querySelector('.comment-input').value = '';
     }
 
-    onResponseCom() {
+    /**
+     * @function
+     * @name onResponseCom
+     * Xhr response info
+     * @param responseSubmit - request return
+     */
+    onResponseCom(responseSubmit) {
         //console.log(JSON.parse(this.xhr.responseText));
         var data = JSON.parse(this.xhr.responseText);
     };
 }
 
+/**
+ * Check if the page exist
+ */
 if(wrapper.length > 0) {
     new WireNews();
 }

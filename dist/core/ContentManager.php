@@ -1,14 +1,30 @@
 <?php
+/**
+ * ContentManager Class
+ */
 Class ContentManager{
-    // Propriétés
+
+    /**
+     * @var PDO
+     */
     private $bdd;
-    // Constructor
+
+    /**
+     * ContentManager constructor
+     */
     public function __construct(){
         require_once('Connexion.php');
         $connexion = Connexion::getInstance();
         $this->bdd = $connexion->bdd;
     }
-    // Methods
+
+    /**
+     * @function
+     * @name signup
+     * @param $pPost - name password
+     * @param $pFIles - image
+     * Signup function
+     */
     public function signup($pPost, $pFIles){
         if(!empty($pPost['name']) && !empty($pPost['password'])) {
             $image = "";
@@ -43,6 +59,12 @@ Class ContentManager{
         die;
     }
 
+    /**
+     * @function
+     * @name login
+     * @param $pPost - name password
+     * Login function
+     */
     public function login($pPost){
         $query = "SELECT * FROM users WHERE username = :username AND password = md5(:password)";
         $statement = $this->bdd->prepare($query);
@@ -74,6 +96,12 @@ Class ContentManager{
         die;
     }
 
+    /**
+     * @function
+     * @name saveImg
+     * @param $pPost - id name country state city latitude longitude date
+     * Save Shader function
+     */
     public function saveImg($pPost) {
         $data = base64_decode(preg_replace('#^data:image/\w+;base64,#i', '', $pPost['base64']));
         $fileName = time() . '.jpg';
@@ -92,6 +120,11 @@ Class ContentManager{
         $query->execute();
     }
 
+    /**
+     * @function
+     * @name getUsers
+     * Get users on wire news page
+     */
     public function getUsers() {
         $query = $this->bdd->prepare('SELECT * FROM users');
         $query->execute();
@@ -104,20 +137,26 @@ Class ContentManager{
                             </div>
                             <div class="txt-user">
                                 <p class="pseudo">'. $user['username'] .'</p>
-                                <p class="desc">Bebo flex</p>
+                                <p class="desc">More info</p>
                             </div>
                         </div>';
         }
         return $response;
     }
 
+    /**
+     * @function
+     * @name getShaders
+     * Get Shaders on profil page
+     */
     public function getShaders() {
         $query = $this->bdd->prepare('SELECT * FROM shaders LEFT JOIN liked_img ON shaders.sh_id = liked_img.li_img_id WHERE usr_id = '.$_SESSION["id"].' ORDER BY sh_date DESC');
+        //$query = $this->bdd->prepare('SELECT DISTINCT `sh_id`,`usr_id`,`usr_name`,`sh_country`,`sh_state`,`sh_city`,`sh_latitude`,`sh_longitude`,`sh_media`,`sh_date` FROM shaders LEFT JOIN liked_img ON shaders.sh_id = liked_img.li_img_id WHERE '.$_SESSION["id"].'ORDER BY sh_date DESC');
         $query->execute();
 
         $results = $query->fetchAll();
         foreach($results as $shader) {
-            $response.= '<div class="shader-container">
+            $response.= '<div  data-id='.$shader['sh_id'].' class="shader-container">
                             <div class="shader-content">
                                 <img src="uploads/shaders/'.$shader['sh_media'].'">
                             </div>
@@ -131,6 +170,12 @@ Class ContentManager{
         return $response;
     }
 
+    /**
+     * @function
+     * @name likeImg
+     * @param $pPost - likeUsrId likeImgId likeStatus
+     * Like action function
+     */
     public function likeImg($pPost) {
         $likedUsrId  = $_SESSION["id"];
         $likedImgId  = $pPost['imgId'];
@@ -152,6 +197,11 @@ Class ContentManager{
         }
     }
 
+    /**
+     * @function
+     * @name getLike
+     * Get Shaders likes
+     */
     public function getLike() {
         $query = $this->bdd->prepare('SELECT * FROM liked_img WHERE usr_id = '.$_SESSION["id"].' ORDER BY sh_date');
         $query->execute();
@@ -165,6 +215,11 @@ Class ContentManager{
         return $response;
     }
 
+    /**
+     * @function
+     * @name getAllShaders
+     * Get all the Shaders on the wire news page
+     */
     public function getAllShaders() {
         //$query = $this->bdd->prepare('SELECT * FROM shaders LEFT JOIN liked_img ON shaders.sh_id = liked_img.li_img_id LEFT JOIN users ON shaders.usr_id = users.id ORDER BY sh_date DESC');
         $query = $this->bdd->prepare('SELECT * FROM shaders LEFT JOIN users ON shaders.usr_id = users.id ORDER BY sh_date DESC');
@@ -214,6 +269,12 @@ Class ContentManager{
         return $response;
     }
 
+    /**
+     * @function
+     * @name comment
+     * @param $pPost - commentUsrId commentUsrName comment dataId date
+     * Comment action on Shader post
+     */
     public function comment($pPost){
         if(!empty($pPost['comment'])) {
             $commentUsrId   = $_SESSION["id"];

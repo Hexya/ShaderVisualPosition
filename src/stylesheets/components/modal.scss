@@ -139,6 +139,12 @@
       }
     }
   }
+  @media (max-width: 768px) {
+    .modal-content {
+      padding: 10px;
+      width: 85%;
+    }
+  }
 }
 
 .modal-success {

@@ -1,7 +1,11 @@
-//color
+/**
+* Vertex
+*/
 varying vec3 vPosition;
 
-// Light blog.edankwan.com/post/three-js-advanced-tips-shadow
+/**
+* Light blog.edankwan.com/post/three-js-advanced-tips-shadow
+*/
 void main() {
 
     vPosition = position;

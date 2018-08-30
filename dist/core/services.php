@@ -1,8 +1,14 @@
 <?php
+/**
+ * Services
+ */
 session_start();
 
 require('ContentManager.php');
-// Analyze of the action received GET or POST
+
+/**
+ * Analyze of the action received GET or POST
+ */
 $action;
 if(isset($_GET["action"])){
     $action = $_GET["action"];
@@ -13,11 +19,13 @@ if(isset($_GET["action"])){
 }
 
 $cm = new ContentManager();
-// Switch case on the action received
+
+/**
+ * Switch case on the action received
+ * Instanciation of a ContentManager object type
+ */
 switch($action){
     case 'signup':
-        // Instanciation of a ContentManager object type
-        // We active the method
         $cm->signup($_POST, $_FILES);
         break;
     case 'login':

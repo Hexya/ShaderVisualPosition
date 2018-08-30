@@ -1,11 +1,24 @@
+/**
+ * LoginModal class
+ */
 export default class LoginModal {
-    constructor() {
 
+    /**
+     * @function
+     * @name constructor
+     * Constructor
+     */
+    constructor() {
         this.registerDOM();
         this.registerEvents();
-
     }
 
+    /**
+     * @function
+     * @name registerDom
+     * Dom elements
+     * Get the Dom modals element
+     */
     registerDOM() {
         //Dom Elements
         this.elts = {};
@@ -19,6 +32,12 @@ export default class LoginModal {
         this.elts.modalContent = this.elts.modal.querySelector('.modal-content');
     }
 
+    /**
+     * @function
+     * @name registerEvents
+     * Events listener
+     * Bind the click on the corresponding button
+     */
     registerEvents() {
         this.onResponse = this.onResponse.bind(this)
         this.elts.closeBtn.addEventListener('click', this.onCloseBtnClick.bind(this));
@@ -26,10 +45,21 @@ export default class LoginModal {
         this.elts.submitBtn.addEventListener('click', this.onSubmitBtnClick.bind(this));
     }
 
+    /**
+     * @function
+     * @name open
+     * Add the class active to the target modal
+     */
     open() {
         this.elts.modal.classList.add('active');
     }
 
+    /**
+     * @function
+     * @name close
+     * Add the class closeModal and remove the class active to the target modal
+     * Remove the input value
+     */
     close() {
         this.elts.modalContent.classList.add('closeModal')
         var myself = this;
@@ -42,14 +72,24 @@ export default class LoginModal {
         this.elts.passwordInput.value = '';
     }
 
+    /**
+     * @function
+     * @name onCloseBtnClick / onOverlayClick
+     * Tell the close function
+     */
     onCloseBtnClick() {
         this.close();
     }
-
     onOverlayClick() {
         this.close();
     }
 
+    /**
+     * @function
+     * @name onSubmitBtnClick
+     * Submit comment action
+     * @param event - the target modal
+     */
     onSubmitBtnClick(event) {
         event.preventDefault();
         const data = new FormData();
@@ -63,6 +103,12 @@ export default class LoginModal {
         this.xhr.send(data);
     }
 
+    /**
+     * @function
+     * @name onResponse
+     * Xhr response login info
+     * Add class error on modal on error
+     */
     onResponse() {
         const data = JSON.parse(this.xhr.responseText);
         if(data.success) {

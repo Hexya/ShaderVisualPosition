@@ -4,7 +4,16 @@ import fragmentShader from './shaders/pFragment.frag';
 import Coordinate from '../../components/Coordinate';
 import State from '../../State'
 
+/**
+ * Plane class
+ * Creation of the plane
+ */
 export default class Plane extends THREE.Object3D {
+    /**
+     * @function
+     * @name constructor
+     * Generation of the basis mesh
+     */
     constructor() {
         super();
 
@@ -14,6 +23,11 @@ export default class Plane extends THREE.Object3D {
 
         this.geometry = new THREE.PlaneBufferGeometry(  window.innerWidth, window.innerHeight, 10 );
 
+        /**
+         * Uniforms params
+         * To pass value from js to glsl
+         * @type {{uTime: {type: string, value: number}, uAmp: {type: string, value: number}, uLon: {type: string, value: string}, uLat: {type: string, value: string}, uFul: {type: string, value: string}, uLastLon: {type: string, value: string}}}
+         */
         this.uniforms = {
             uTime: { type: 'f', value: 0},
             uAmp: { type:'f', value: 2. },
@@ -35,6 +49,12 @@ export default class Plane extends THREE.Object3D {
         this.add( this.mesh );
     }
 
+    /**
+     * @function
+     * @name update
+     * Define the uniforms value
+     * @param time - use the THREE.Clock() to update
+     */
     update(time) {
         this.material.uniforms.uLon.value = State.longitude;
         this.material.uniforms.uLat.value = State.latitude;

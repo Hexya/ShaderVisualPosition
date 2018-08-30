@@ -160,6 +160,26 @@
       }
     }
   }
+  @media (max-width: 768px) {
+    .gallery-container {
+      height: 55vh;
+      .shader-container {
+        span {
+          display: none;
+        }
+      }
+    }
+    .user-profil-container {
+      .more-txt {
+        display: none;
+      }
+    }
+  }
+  @media (max-width: 415px) {
+    .gallery-container {
+      height: 38vh;
+    }
+  }
 }
 
 @keyframes likeAnime {

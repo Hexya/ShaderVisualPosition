@@ -1,4 +1,14 @@
+/**
+ * State class
+ * Global variable
+ */
 class State {
+    /**
+     * @function
+     * @name constructor
+     * Constructor
+     * Basis wall Shader value
+     */
     constructor() {
       this.country = null;
       this.state = null;

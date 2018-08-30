@@ -55,16 +55,30 @@ header {
       width: 120px;
       top: 20px;
       left: calc(50% - 60px);
+      z-index: 10;
       img {
         width: 100%;
       }
     }
     .logout {
+      z-index: 9;
       h3, a {
        filter: invert(1);
       }
       .img-container{
         filter: invert(1);
+      }
+    }
+    @media (max-width: 768px) {
+      .logout {
+        left: 10px;
+        .logout-img {
+          position: absolute;
+          right: 10px;
+          img {
+            height: 20px;
+          }
+        }
       }
     }
   }
@@ -78,12 +92,31 @@ header {
   }
 }
 .profil-header {
+  height: 80px !important;
   .logout {
     h3, a{
       filter: none !important;
     }
     .img-container{
       filter: invert(0) !important;
+    }
+  }
+  @media (max-width: 768px) {
+    border-bottom: 1px solid white;
+    .wire-news-btn {
+      top: 5px !important;
+      width: 110px !important;
+      left: calc(50% - 55px) !important;
+    }
+    .logout {
+      left: 10px;
+      .logout-img {
+        position: absolute;
+        right: 10px;
+        img {
+          height: 20px;
+        }
+      }
     }
   }
 }

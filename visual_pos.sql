@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.7
+-- version 4.8.2
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Jul 05, 2018 at 06:46 PM
--- Server version: 5.6.38
--- PHP Version: 7.2.1
+-- Host: localhost:8889
+-- Generation Time: Aug 25, 2018 at 01:22 PM
+-- Server version: 5.7.21
+-- PHP Version: 7.2.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,6 +19,35 @@ SET time_zone = "+00:00";
 --
 -- Database: `visual_pos`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `comments`
+--
+
+CREATE TABLE `comments` (
+  `com_id` int(11) NOT NULL,
+  `usr_id` int(11) NOT NULL,
+  `usr_name` varchar(255) NOT NULL,
+  `sh_id` int(11) NOT NULL DEFAULT '0',
+  `com_value` varchar(255) NOT NULL,
+  `com_date` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `comments`
+--
+
+INSERT INTO `comments` (`com_id`, `usr_id`, `usr_name`, `sh_id`, `com_value`, `com_date`) VALUES
+(1, 12, 'hexya', 24, 'hola chica', '2018-07-04'),
+(38, 118, 'Vegita', 41, 'pink', '2018-08-24'),
+(43, 112, 'Gotenks', 45, 'Nice picture', '2018-08-24'),
+(44, 115, 'Frieza', 43, 'I like this dark color !', '2018-08-24'),
+(46, 115, 'Frieza', 45, 'So bad..', '2018-08-24'),
+(47, 115, 'Frieza', 38, 'So dark jaja', '2018-08-24'),
+(48, 115, 'Frieza', 18, 'Yeah !', '2018-08-24'),
+(49, 119, 'Bardock', 42, 'Blood for brave !', '2018-08-24');
 
 -- --------------------------------------------------------
 
@@ -38,13 +67,31 @@ CREATE TABLE `liked_img` (
 --
 
 INSERT INTO `liked_img` (`li_id`, `li_usr_id`, `li_img_id`, `li_status`) VALUES
-(1, 110, 11, 1),
-(7, 110, 18, 1),
 (8, 110, 12, 1),
 (9, 110, 10, 1),
-(10, 110, 11, 0),
-(11, 110, 11, 1),
-(12, 110, 29, 1);
+(12, 110, 29, 1),
+(13, 110, 36, 0),
+(21, 110, 38, 1),
+(29, 110, 35, 0),
+(30, 110, 28, 0),
+(31, 110, 26, 0),
+(32, 110, 24, 1),
+(33, 112, 43, 1),
+(34, 112, 35, 1),
+(35, 118, 45, 0),
+(36, 114, 45, 1),
+(37, 114, 43, 1),
+(38, 112, 45, 1),
+(39, 112, 42, 0),
+(40, 115, 45, 0),
+(41, 115, 43, 1),
+(42, 115, 42, 1),
+(43, 115, 36, 1),
+(44, 115, 35, 1),
+(45, 115, 24, 1),
+(46, 115, 18, 1),
+(47, 119, 45, 1),
+(48, 119, 42, 1);
 
 -- --------------------------------------------------------
 
@@ -79,7 +126,12 @@ INSERT INTO `shaders` (`sh_id`, `usr_id`, `usr_name`, `sh_country`, `sh_state`, 
 (34, 110, 'Hexya', 'States', 'Californie', 'Las Vegas', '36.1699412', '-115.13982959999998', '1530814371.jpg', '2018-07-05 18:12:51'),
 (35, 110, 'Hexya', 'France', 'Garonne\r\n', 'Bordeaux', '44.837789', '2.287592000000018', '1530814419.jpg', '2018-07-05 18:13:39'),
 (36, 110, 'Hexya', 'States', 'San Francisco', 'Californie', '37.7749295', '-122.41941550000001', '1530814592.jpg', '2018-07-05 18:16:32'),
-(38, 110, 'Hexya', 'Belgique', 'Liège', 'Liège', '50.6325574', '-122.41941550000001', '1530814719.jpg', '2018-07-05 18:18:39');
+(38, 110, 'Hexya', 'Belgique', 'Liège', 'Liège', '50.6325574', '-122.41941550000001', '1530814719.jpg', '2018-07-05 18:18:39'),
+(40, 114, 'Bulma', 'France', 'Seine-Saint-Denis', 'Épinay-sur-Seine', '48.9535', '2.3151', '1535016568.jpg', '2018-08-23 09:29:28'),
+(41, 112, 'Gotenks', 'France', 'Seine-Saint-Denis', 'Épinay-sur-Seine', '48.9535', '2.3151', '1535016738.jpg', '2018-08-23 09:32:18'),
+(42, 112, 'Gotenks', 'France', 'Seine-Saint-Denis', 'Épinay-sur-Seine', '48.9535', '2.3151', '1535016794.jpg', '2018-08-23 09:33:14'),
+(43, 112, 'Gotenks', 'France', 'Seine-Saint-Denis', 'Épinay-sur-Seine', '48.9535', '2.3151', '1535016850.jpg', '2018-08-23 09:34:10'),
+(45, 112, 'Gotenks', 'France', 'Seine-Saint-Denis', 'Épinay-sur-Seine', '48.9535', '2.3151', '1535016932.jpg', '2018-08-23 09:35:32');
 
 -- --------------------------------------------------------
 
@@ -99,14 +151,24 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `media`) VALUES
-(1, 'admin', 'admin', ''),
 (110, 'Hexya', 'db5498b36e1009f078144ff218de820e', '5b39f9efe1dda728722_tool_512x512.jpg'),
-(112, 'Goten', '9f5a44a734ac9e43b5968d0f3b71d69b', '5b3b6224675adgoten.png'),
-(113, 'Reerg', '9316c41c790de3ddc6934c36d5f5becb', '');
+(112, 'Gotenks', '9f5a44a734ac9e43b5968d0f3b71d69b', '5b3b6224675adgoten.png'),
+(114, 'Bulma', '9f5a44a734ac9e43b5968d0f3b71d69b', '5b71f225da10cbulma019.jpg'),
+(115, 'Frieza', '9f5a44a734ac9e43b5968d0f3b71d69b', '5b7ea3a7e5420Frieza.jpg'),
+(116, 'Beerus', '9f5a44a734ac9e43b5968d0f3b71d69b', '5b7ea3c59f705Beerus.jpg'),
+(117, 'Gohan', '9f5a44a734ac9e43b5968d0f3b71d69b', '5b7ea3d95590eGohan.png'),
+(118, 'Vegita', '9f5a44a734ac9e43b5968d0f3b71d69b', '5b7ea3f4c8ebdVegita.png'),
+(119, 'Bardock', '9f5a44a734ac9e43b5968d0f3b71d69b', '5b7ea40803a5bBardock.png');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `comments`
+--
+ALTER TABLE `comments`
+  ADD PRIMARY KEY (`com_id`);
 
 --
 -- Indexes for table `liked_img`
@@ -131,22 +193,28 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `comments`
+--
+ALTER TABLE `comments`
+  MODIFY `com_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+
+--
 -- AUTO_INCREMENT for table `liked_img`
 --
 ALTER TABLE `liked_img`
-  MODIFY `li_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `li_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT for table `shaders`
 --
 ALTER TABLE `shaders`
-  MODIFY `sh_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `sh_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=114;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=120;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

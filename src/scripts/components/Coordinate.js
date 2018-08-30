@@ -2,13 +2,27 @@ import State from '../State';
 
 let wrapper = document.querySelectorAll('.experience-wrapper-container');
 
+/**
+ * Coordiante class
+ */
 export default class Coordinate {
-    constructor() {
 
+    /**
+     * @function
+     * @name constructor
+     * Constructor
+     */
+    constructor() {
         this.registerDOM();
         this.registerEvents();
     }
 
+    /**
+     * @function
+     * @name registerDom
+     * Dom elements
+     * Get the Dom data element
+     */
     registerDOM() {
         //Dom Elements
         this.elt = wrapper[0];
@@ -24,11 +38,24 @@ export default class Coordinate {
         this.elts.transitionTxt = this.elt.querySelector('.loading');
     }
 
+    /**
+     * @function
+     * @name registerEvents
+     * Events listener
+     * Bind the click on the generating button
+     */
     registerEvents() {
         this.onResponse = this.onResponse.bind(this)
         this.elts.generateBtn.addEventListener('click', this.onGenerateBtnClick.bind(this));
     }
 
+    /**
+     * @function
+     * @name autogeo
+     * Geoip
+     * Geolocalisation Api
+     * Return the coordinate of the position
+     */
     autoGeo() {
         const data = new FormData();
         this.xhr = new XMLHttpRequest();
@@ -37,6 +64,11 @@ export default class Coordinate {
         this.xhr.send(data);
     }
 
+    /**
+     * @function
+     * @name generateTransition
+     * Transition between the click & the generation
+     */
     generateTransition() {
         this.elts.transition.classList.add('generate-transition');
         this.elts.transitionTxt.classList.add('generating');
@@ -50,11 +82,23 @@ export default class Coordinate {
         },5000);
     }
 
+    /**
+     * @function
+     * @name onGenerateBtnClick
+     * Action on click
+     * Generate the transition and call the Geoip Api
+     */
     onGenerateBtnClick() {
         this.generateTransition();
         this.autoGeo();
     }
 
+    /**
+     * @function
+     * @name onResponse
+     * Xhr response like info
+     * Return the coordinate from the Geoip Api
+     */
     onResponse() {
         const data = JSON.parse(this.xhr.responseText);
         State.country = data.country_name;

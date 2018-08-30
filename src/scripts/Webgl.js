@@ -1,7 +1,19 @@
 import * as THREE from 'three';
 import Plane from './objects/Plane';
 
+/**
+ *  Webgl class
+ * WebGl init
+ */
 export default class Webgl {
+
+  /**
+   * @function
+   * @name constructor
+   * @param width - window width
+   * @param height - window height
+   * Configuration of the Webgl scene
+   */
   constructor( width, height ) {
     this.params = {};
 
@@ -30,16 +42,31 @@ export default class Webgl {
     this.onError = this.onError.bind(this)
   }
 
-  // State ------
 
+  /**
+   * @function
+   * @name onSucces
+   * Success return
+   */
   onSuccess() {
     console.log('SUCCESS');
   }
 
+  /**
+   * @function
+   * @name onError
+   * Error return
+   */
   onError() {
     console.log('ERROR');
   }
 
+  /**
+   * @function
+   * @name resize
+   * @param width - window width
+   * @param height - window height
+   */
   resize( width, height ) {
     if ( this.composer ) {
       this.composer.setSize( width, height );
@@ -51,6 +78,11 @@ export default class Webgl {
     this.renderer.setSize( width, height );
   }
 
+  /**
+   * @function
+   * @name render
+   * Render of the gl scene
+   */
   render() {
     this.renderer.render( this.scene, this.camera );
 

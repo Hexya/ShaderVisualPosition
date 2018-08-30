@@ -2,8 +2,16 @@ import State from "../State";
 
 let wrapper = document.querySelectorAll('.profil-wrapper-container');
 
+/**
+ * Profil Page
+ */
 class Profil {
 
+    /**
+     * @function
+     * @name constructor
+     * Constructor
+     */
     constructor() {
         this.registerDOM();
         this.registerEvents();
@@ -11,6 +19,12 @@ class Profil {
         this.updateLikeImg();
     }
 
+    /**
+     * @function
+     * @name registerDom
+     * Dom elements
+     * Get the Dom button element
+     */
     registerDOM() {
         this.elt = wrapper[0];
         this.elts = {};
@@ -19,12 +33,23 @@ class Profil {
         this.elts.like = this.elt.querySelectorAll('.ice-cream');
     }
 
+    /**
+     * @function
+     * @name registerEvents
+     * Events listener
+     * Bind the click on the corresponding button
+     */
     registerEvents() {
         for(var i=0; i<this.elts.like.length; i++) {
             this.elts.like[i].addEventListener('click', this.onLikeBtn.bind(this));
         }
     }
 
+    /**
+     * @function
+     * @name updateLikeImg
+     * Update image on like
+     */
     updateLikeImg(){
         for(var i=0; i<this.elts.like.length; i++) {
             if (this.elts.like[i].getAttribute('status') == 0) {
@@ -35,6 +60,12 @@ class Profil {
         }
     }
 
+    /**
+     * @function
+     * @name onlikeBtn
+     * Like button click action
+     * @param el - The like button clicked
+     */
     onLikeBtn(el) {
         console.log(el.path[0].getAttribute('value'))
         var status = 0;
@@ -61,10 +92,22 @@ class Profil {
         this.xhr.send(data);
     }
 
-    onResponse(callback) {
-        console.log(callback);
+    /**
+     * @function
+     * @name onResponse
+     * Xhr response like info
+     * @param response - request return
+     */
+    onResponse(response) {
+        //console.log(response);
     }
 
+    /**
+     * @function
+     * @name resizeImg
+     * Resize img
+     * Checking if the img is in landscape or portrait position to adapt
+     */
     resizeImg() {
         // Height = width
         for(var i=0; i<this.elts.imgCont.length; i++) {
@@ -83,6 +126,9 @@ class Profil {
     }
 }
 
+/**
+ * Check if the page exist
+ */
 if(wrapper.length > 0) {
     new Profil();
 }

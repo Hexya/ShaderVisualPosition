@@ -1,11 +1,24 @@
+/**
+ * SignupModal class
+ */
 export default class SignupModal {
-    constructor() {
 
+    /**
+     * @function
+     * @name constructor
+     * Constructor
+     */
+    constructor() {
         this.registerDOM();
         this.registerEvents();
-
     }
 
+    /**
+     * @function
+     * @name registerDom
+     * Dom elements
+     * Get the Dom modals element
+     */
     registerDOM() {
         //Dom Elements
         this.elts = {};
@@ -23,6 +36,12 @@ export default class SignupModal {
         this.elts.modalContentSuccess = this.elts.modalSuccess.querySelector('.modal-content');
     }
 
+    /**
+     * @function
+     * @name registerEvents
+     * Events listener
+     * Bind the click on the corresponding button
+     */
     registerEvents() {
         this.onResponse = this.onResponse.bind(this)
         this.elts.closeBtn.addEventListener('click', this.onCloseBtnClick.bind(this));
@@ -30,10 +49,21 @@ export default class SignupModal {
         this.elts.submitBtn.addEventListener('click', this.onSubmitBtnClick.bind(this));
     }
 
+    /**
+     * @function
+     * @name open
+     * Add the class active to the target modal
+     */
     open() {
         this.elts.modal.classList.add('active');
     }
 
+    /**
+     * @function
+     * @name close
+     * Add the class closeModal and remove the class active to the target modal
+     * Remove the input value
+     */
     close() {
         this.elts.modalContent.classList.add('closeModal')
         setTimeout(() => {
@@ -45,14 +75,24 @@ export default class SignupModal {
         this.elts.passwordInput.value = '';
     }
 
+    /**
+     * @function
+     * @name onCloseBtnClick / onOverlayClick
+     * Tell the close function
+     */
     onCloseBtnClick() {
         this.close();
     }
-
     onOverlayClick() {
         this.close();
     }
 
+    /**
+     * @function
+     * @name onSubmitBtnClick
+     * Submit comment action
+     * @param event - the target modal
+     */
     onSubmitBtnClick(event) {
         event.preventDefault();
         const data = new FormData();
@@ -67,7 +107,12 @@ export default class SignupModal {
         this.xhr.send(data);
     }
 
-    onScucces(){
+    /**
+     * @function
+     * @name onSucces
+     * onResponse success value
+     */
+    onSucces(){
         this.elts.modalSuccess.classList.add('active');
         setTimeout(() => {
                 this.elts.modalContentSuccess.classList.add('closeModal');
@@ -78,12 +123,18 @@ export default class SignupModal {
         }, 2000);
     }
 
+    /**
+     * @function
+     * @name onResponse
+     * Xhr response signup info
+     * Add class error on modal on error
+     */
     onResponse() {
         //console.log(this.xhr.responseText)
         const data = JSON.parse(this.xhr.responseText);
         if(data.success) {
             this.close();
-            this.onScucces();
+            this.onSucces();
             //window.location.href = '/ShaderVisualPosition/dist/experience.php'
         } else {
             this.elts.modal.classList.add('error');

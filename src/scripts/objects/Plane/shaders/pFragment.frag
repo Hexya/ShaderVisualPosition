@@ -91,18 +91,23 @@ float snoise(vec3 v)
         dot(p2,x2), dot(p3,x3) ) );
 }
 
-
-//uniform sampler2D tDiffuse;
+/**
+* Uniform sampler2D tDiffuse;
+*/
 uniform float uTime;
 uniform float uLon;
 uniform float uLat;
 uniform float uFul;
 uniform float uLastLon;
 
-//color
+/**
+* Color
+*/
 varying vec3 vPosition;
 
-//Dégradé de matiere avec shaderific mix function et le snoise
+/**
+* Material gradient whith shaderific mix function et le snoise
+*/
 void main() {
 
 

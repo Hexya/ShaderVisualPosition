@@ -30,7 +30,7 @@ if(!isset($_SESSION["username"])) {
                 </a>
             </div>
             <h3>'.$_SESSION["username"].'</h3>
-            <a href="logout.php">
+            <a class="logout-img" href="logout.php">
             <img src="images/logout.svg">
             </a>
          </div>';
